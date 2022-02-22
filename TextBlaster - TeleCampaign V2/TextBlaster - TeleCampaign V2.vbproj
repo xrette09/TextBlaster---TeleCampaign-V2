@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4B3E088-5AF1-4E42-AF3E-24D61B9B1E1E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TextBlaster___TeleCampaign_V2</RootNamespace>
+    <AssemblyName>TextBlaster - TeleCampaign V2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <StartupObject>TextBlaster___TeleCampaign_V2.Program</StartupObject>
+    <FileAlignment>512</FileAlignment>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TextBlaster___TeleCampaign_V2.My.MyApplication</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.2" />
+    <Reference Include="DevExpress.Data.v17.2" />
+    <Reference Include="DevExpress.Printing.v17.2.Core" />
+    <Reference Include="DevExpress.Utils.v17.2" />
+    <Reference Include="DevExpress.XtraBars.v17.2" />
+    <Reference Include="DevExpress.Sparkline.v17.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v17.2" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\frm_Inbox.Designer.vb">
+      <DependentUpon>frm_Inbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_Inbox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_Outbox.Designer.vb">
+      <DependentUpon>frm_Outbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_Outbox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Main.Designer.vb">
+      <DependentUpon>frm_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_Message.Designer.vb">
+      <DependentUpon>frm_Message.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_Message.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <EmbeddedResource Include="Form\frm_Inbox.resx">
+      <DependentUpon>frm_Inbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_Message.resx">
+      <DependentUpon>frm_Message.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_Outbox.resx">
+      <DependentUpon>frm_Outbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_No_SIM_Card_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_No_SIM_Card_25px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_No_SIM_Card_25px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_No_SIM_Card_25px_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_No_SIM_Card_25px_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_No_SIM_Card_25px_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_No_SIM_Card_25px_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_No_SIM_Card_25px_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_No_SIM_Card_25px_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sent_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sent_25px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sent_25px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sent_25px_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sent_25px_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sent_25px_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sent_25px_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sent_25px_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sent_25px_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_SIM_Card_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_SIM_Card_25px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_SIM_Card_25px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_SIM_Card_25px_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_SIM_Card_25px_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_SIM_Card_25px_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_SIM_Card_25px_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_SIM_Card_25px_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-server-connection-internet-things-line-vector-28087042.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_USB_On_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Group_Message_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Chip_Card_40px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Inbox_40px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sent_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="API\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
