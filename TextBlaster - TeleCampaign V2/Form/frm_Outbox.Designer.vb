@@ -19,19 +19,34 @@ Partial Class frm_Outbox
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.ALL = New DevExpress.XtraEditors.PanelControl()
+        CType(Me.ALL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ALL
+        '
+        Me.ALL.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ALL.Location = New System.Drawing.Point(0, 0)
+        Me.ALL.Name = "ALL"
+        Me.ALL.Size = New System.Drawing.Size(974, 461)
+        Me.ALL.TabIndex = 5
         '
         'frm_Outbox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.AutoSize = True
+        Me.ClientSize = New System.Drawing.Size(974, 461)
+        Me.Controls.Add(Me.ALL)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frm_Outbox"
         Me.Text = "frm_Outbox"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.ALL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents ALL As DevExpress.XtraEditors.PanelControl
 End Class

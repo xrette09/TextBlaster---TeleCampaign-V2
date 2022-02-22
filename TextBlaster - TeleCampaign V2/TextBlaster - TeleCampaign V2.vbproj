@@ -50,6 +50,9 @@
     <Reference Include="DevExpress.XtraBars.v17.2" />
     <Reference Include="DevExpress.Sparkline.v17.2.Core" />
     <Reference Include="DevExpress.XtraEditors.v17.2" />
+    <Reference Include="mCoreLib">
+      <HintPath>..\..\xrette09\TextBlaster---TeleCampaign\TextBlaster - TeleCampaign\bin\Debug\mCoreLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -73,6 +76,7 @@
     <Import Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\SMS_API.vb" />
     <Compile Include="Form\frm_Inbox.Designer.vb">
       <DependentUpon>frm_Inbox.vb</DependentUpon>
     </Compile>
@@ -97,6 +101,7 @@
     <Compile Include="Form\frm_Message.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
@@ -126,6 +131,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
@@ -239,7 +245,16 @@
     <None Include="Resources\icons8_Sent_40px.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="API\" />
+    <None Include="Resources\icons8_Sent_25px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ID_Card_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_In_Transit_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sent_25px2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

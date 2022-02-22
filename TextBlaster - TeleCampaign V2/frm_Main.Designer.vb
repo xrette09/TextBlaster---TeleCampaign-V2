@@ -25,6 +25,7 @@
     ''' </summary>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim SplashScreenManager1 As DevExpress.XtraSplashScreen.SplashScreenManager = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, Nothing, True, True)
         Me.ribbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.BarStaticItem1 = New DevExpress.XtraBars.BarStaticItem()
         Me.BarStaticItem2 = New DevExpress.XtraBars.BarStaticItem()
@@ -46,8 +47,14 @@
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
         CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'SplashScreenManager1
+        '
+        SplashScreenManager1.ClosingDelay = 500
         '
         'ribbonControl1
         '
@@ -65,7 +72,7 @@
         Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem11)
         Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem12)
         Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.ribbonPage1})
-        Me.ribbonControl1.Size = New System.Drawing.Size(1028, 162)
+        Me.ribbonControl1.Size = New System.Drawing.Size(1018, 146)
         '
         'BarStaticItem1
         '
@@ -200,13 +207,17 @@
         '
         'DefaultLookAndFeel1
         '
-        Me.DefaultLookAndFeel1.LookAndFeel.SkinName = "The Bezier"
+        Me.DefaultLookAndFeel1.LookAndFeel.SkinName = "Sharp Plus"
+        '
+        'XtraTabbedMdiManager1
+        '
+        Me.XtraTabbedMdiManager1.MdiParent = Me
         '
         'frm_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1028, 454)
+        Me.ClientSize = New System.Drawing.Size(1018, 449)
         Me.Controls.Add(Me.ribbonControl1)
         Me.IsMdiContainer = True
         Me.Name = "frm_Main"
@@ -214,6 +225,7 @@
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -242,4 +254,5 @@
     Friend WithEvents inbox_BTN As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents outbox_BTN As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem6 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents XtraTabbedMdiManager1 As DevExpress.XtraTabbedMdi.XtraTabbedMdiManager
 End Class

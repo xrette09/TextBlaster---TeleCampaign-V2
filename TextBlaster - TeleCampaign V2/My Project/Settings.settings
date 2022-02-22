@@ -1,7 +1,48 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">124.107.36.218</Value>
+    </Setting>
+    <Setting Name="User" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PulsarServer</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@lara19</Value>
+    </Setting>
+    <Setting Name="dbase_1st" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dbvoters_1st</Value>
+    </Setting>
+    <Setting Name="dbase_2nd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dbvoters_2nd</Value>
+    </Setting>
+    <Setting Name="dbase_3rd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dbvoters</Value>
+    </Setting>
+    <Setting Name="sim1Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM15</Value>
+    </Setting>
+    <Setting Name="sim2Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM16</Value>
+    </Setting>
+    <Setting Name="sim3Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM17</Value>
+    </Setting>
+    <Setting Name="sim4Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM18</Value>
+    </Setting>
+    <Setting Name="sim5Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM19</Value>
+    </Setting>
+    <Setting Name="sim6Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM20</Value>
+    </Setting>
+    <Setting Name="sim7Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM21</Value>
+    </Setting>
+    <Setting Name="sim8Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM22</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
