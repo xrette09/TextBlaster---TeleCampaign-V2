@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frm_Outbox
+Partial Class frm_Sentbox
     Inherits DevExpress.XtraEditors.XtraForm
 
     'Form overrides dispose to clean up the component list.
@@ -31,7 +31,7 @@ Partial Class frm_Outbox
         Me.ALL.Size = New System.Drawing.Size(974, 461)
         Me.ALL.TabIndex = 5
         '
-        'frm_Outbox
+        'frm_Sentbox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -40,8 +40,8 @@ Partial Class frm_Outbox
         Me.Controls.Add(Me.ALL)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "frm_Outbox"
-        Me.Text = "frm_Outbox"
+        Me.Name = "frm_Sentbox"
+        Me.Text = "frm_Sentbox"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.ALL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

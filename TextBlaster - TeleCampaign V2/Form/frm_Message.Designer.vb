@@ -32,8 +32,11 @@ Partial Class frm_Message
         Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
         Me.ALL = New DevExpress.XtraEditors.PanelControl()
+        Me.Control_MessageList1 = New TextBlaster___TeleCampaign_V2.control_MessageList()
+        Me.Control_Sim11 = New TextBlaster___TeleCampaign_V2.control_SMS()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ALL, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ALL.SuspendLayout()
         Me.SuspendLayout()
         '
         'BarManager1
@@ -60,29 +63,25 @@ Partial Class frm_Message
         '
         'BarButtonItem1
         '
-        Me.BarButtonItem1.Caption = "MESSAGE LIST"
+        Me.BarButtonItem1.Caption = "Message List"
         Me.BarButtonItem1.Id = 0
         Me.BarButtonItem1.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Sent_25px1
-        Me.BarButtonItem1.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.BarButtonItem1.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BarButtonItem1.ItemAppearance.Normal.Options.UseFont = True
         Me.BarButtonItem1.Name = "BarButtonItem1"
         '
         'BarButtonItem2
         '
-        Me.BarButtonItem2.Caption = "INDIVIDUAL MESSAGE"
+        Me.BarButtonItem2.Caption = "Individual Message"
         Me.BarButtonItem2.Id = 1
         Me.BarButtonItem2.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_ID_Card_25px
-        Me.BarButtonItem2.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.BarButtonItem2.ItemAppearance.Normal.Options.UseFont = True
         Me.BarButtonItem2.Name = "BarButtonItem2"
         '
         'BarButtonItem3
         '
-        Me.BarButtonItem3.Caption = "DELIVERY STATUS"
+        Me.BarButtonItem3.Caption = "Delivery Status"
         Me.BarButtonItem3.Id = 2
         Me.BarButtonItem3.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_In_Transit_25px
-        Me.BarButtonItem3.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BarButtonItem3.ItemAppearance.Normal.Options.UseFont = True
         Me.BarButtonItem3.Name = "BarButtonItem3"
         '
         'Bar2
@@ -107,6 +106,7 @@ Partial Class frm_Message
         Me.Bar3.OptionsBar.DrawDragBorder = False
         Me.Bar3.OptionsBar.UseWholeRow = True
         Me.Bar3.Text = "Status bar"
+        Me.Bar3.Visible = False
         '
         'barDockControlTop
         '
@@ -114,39 +114,57 @@ Partial Class frm_Message
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(974, 64)
+        Me.barDockControlTop.Size = New System.Drawing.Size(974, 50)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 442)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 443)
         Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(974, 19)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(974, 18)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 64)
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 50)
         Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 378)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 393)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(974, 64)
+        Me.barDockControlRight.Location = New System.Drawing.Point(974, 50)
         Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 378)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 393)
         '
         'ALL
         '
+        Me.ALL.Controls.Add(Me.Control_MessageList1)
+        Me.ALL.Controls.Add(Me.Control_Sim11)
         Me.ALL.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ALL.Location = New System.Drawing.Point(0, 64)
+        Me.ALL.Location = New System.Drawing.Point(0, 50)
         Me.ALL.Name = "ALL"
-        Me.ALL.Size = New System.Drawing.Size(974, 378)
+        Me.ALL.Size = New System.Drawing.Size(974, 393)
         Me.ALL.TabIndex = 4
+        '
+        'Control_MessageList1
+        '
+        Me.Control_MessageList1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Control_MessageList1.Location = New System.Drawing.Point(2, 2)
+        Me.Control_MessageList1.Name = "Control_MessageList1"
+        Me.Control_MessageList1.Size = New System.Drawing.Size(970, 389)
+        Me.Control_MessageList1.TabIndex = 1
+        '
+        'Control_Sim11
+        '
+        Me.Control_Sim11.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Control_Sim11.Location = New System.Drawing.Point(2, 2)
+        Me.Control_Sim11.Name = "Control_Sim11"
+        Me.Control_Sim11.Size = New System.Drawing.Size(970, 389)
+        Me.Control_Sim11.TabIndex = 0
         '
         'frm_Message
         '
@@ -165,6 +183,7 @@ Partial Class frm_Message
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ALL, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ALL.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -182,4 +201,6 @@ Partial Class frm_Message
     Friend WithEvents BarButtonItem2 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem3 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents ALL As DevExpress.XtraEditors.PanelControl
+    Friend WithEvents Control_Sim11 As control_SMS
+    Friend WithEvents Control_MessageList1 As control_MessageList
 End Class

@@ -44,17 +44,43 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v17.2" />
+    <Reference Include="DevExpress.CodeParser.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v17.2" />
+    <Reference Include="DevExpress.DataAccess.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.2.UI, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v17.2.Core" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v17.2" />
+    <Reference Include="DevExpress.Utils.v17.2.UI, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v17.2" />
     <Reference Include="DevExpress.Sparkline.v17.2.Core" />
+    <Reference Include="DevExpress.XtraCharts.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.2.Extensions, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.2.Wizard, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v17.2" />
+    <Reference Include="DevExpress.XtraGauges.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.2.Extensions, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="mCoreLib">
       <HintPath>..\..\xrette09\TextBlaster---TeleCampaign\TextBlaster - TeleCampaign\bin\Debug\mCoreLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,16 +103,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\SMS_API.vb" />
+    <Compile Include="Form\frm_ComposeMessage.designer.vb">
+      <DependentUpon>frm_ComposeMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_ComposeMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\frm_Inbox.Designer.vb">
       <DependentUpon>frm_Inbox.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\frm_Inbox.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frm_Outbox.Designer.vb">
-      <DependentUpon>frm_Outbox.vb</DependentUpon>
+    <Compile Include="Form\frm_Message Controls\control_MessageList.Designer.vb">
+      <DependentUpon>control_MessageList.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\frm_Outbox.vb">
+    <Compile Include="Form\frm_Message Controls\control_MessageList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\frm_Message Controls\control_SIM1.Designer.vb">
+      <DependentUpon>control_SIM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_Message Controls\control_SIM1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\frm_Message Controls\control_SMS.Designer.vb">
+      <DependentUpon>control_SMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_Message Controls\control_SMS.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\frm_Sentbox.Designer.vb">
+      <DependentUpon>frm_Sentbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_Sentbox.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Main.vb">
@@ -107,14 +157,26 @@
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <EmbeddedResource Include="Form\frm_ComposeMessage.resx">
+      <DependentUpon>frm_ComposeMessage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_Inbox.resx">
       <DependentUpon>frm_Inbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_Message Controls\control_MessageList.resx">
+      <DependentUpon>control_MessageList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_Message Controls\control_SIM1.resx">
+      <DependentUpon>control_SIM1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_Message Controls\control_SMS.resx">
+      <DependentUpon>control_SMS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_Message.resx">
       <DependentUpon>frm_Message.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frm_Outbox.resx">
-      <DependentUpon>frm_Outbox.vb</DependentUpon>
+    <EmbeddedResource Include="Form\frm_Sentbox.resx">
+      <DependentUpon>frm_Sentbox.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.vb</DependentUpon>
@@ -122,20 +184,20 @@
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -147,84 +209,6 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_No_SIM_Card_25px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_No_SIM_Card_25px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_No_SIM_Card_25px_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_No_SIM_Card_25px_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_No_SIM_Card_25px_4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_No_SIM_Card_25px_5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_No_SIM_Card_25px_6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_No_SIM_Card_25px_7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_No_SIM_Card_25px_8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Sent_25px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Sent_25px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Sent_25px_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Sent_25px_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Sent_25px_4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Sent_25px_5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Sent_25px_6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Sent_25px_7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Sent_25px_8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_SIM_Card_25px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_SIM_Card_25px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_SIM_Card_25px_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_SIM_Card_25px_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_SIM_Card_25px_4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_SIM_Card_25px_5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_SIM_Card_25px_6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_SIM_Card_25px_7.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\database-server-connection-internet-things-line-vector-28087042.png" />
@@ -255,6 +239,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Sent_25px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_SIM_Card_20px_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -48,6 +48,11 @@
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
         Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
+        Me.Bar3 = New DevExpress.XtraBars.Bar()
+        Me.Bar1 = New DevExpress.XtraBars.Bar()
+        Me.RibbonStatusBar1 = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
+        Me.SkinRibbonGalleryBarItem1 = New DevExpress.XtraBars.SkinRibbonGalleryBarItem()
+        Me.BarStaticItem7 = New DevExpress.XtraBars.BarStaticItem()
         CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -58,10 +63,11 @@
         '
         'ribbonControl1
         '
+        Me.ribbonControl1.AutoHideEmptyItems = True
         Me.ribbonControl1.ExpandCollapseItem.Id = 0
-        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.BarStaticItem1, Me.BarStaticItem2, Me.BarStaticItem3, Me.BarStaticItem4, Me.BarStaticItem5, Me.BarStaticItem6, Me.BarStaticItem11, Me.BarStaticItem12, Me.BarStaticItem13, Me.BarButtonItem1, Me.BarButtonItem2, Me.message_BTN, Me.inbox_BTN, Me.outbox_BTN, Me.BarButtonItem6})
+        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.BarStaticItem1, Me.BarStaticItem2, Me.BarStaticItem3, Me.BarStaticItem4, Me.BarStaticItem5, Me.BarStaticItem6, Me.BarStaticItem11, Me.BarStaticItem12, Me.BarStaticItem13, Me.BarButtonItem1, Me.BarButtonItem2, Me.message_BTN, Me.inbox_BTN, Me.outbox_BTN, Me.BarButtonItem6, Me.SkinRibbonGalleryBarItem1, Me.BarStaticItem7})
         Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.ribbonControl1.MaxItemId = 20
+        Me.ribbonControl1.MaxItemId = 147
         Me.ribbonControl1.Name = "ribbonControl1"
         Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem1)
         Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem2)
@@ -72,13 +78,16 @@
         Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem11)
         Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem12)
         Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.ribbonPage1})
-        Me.ribbonControl1.Size = New System.Drawing.Size(1018, 146)
+        Me.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.TabletOffice
+        Me.ribbonControl1.Size = New System.Drawing.Size(1028, 87)
+        Me.ribbonControl1.StatusBar = Me.RibbonStatusBar1
+        Me.ribbonControl1.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.[True]
         '
         'BarStaticItem1
         '
         Me.BarStaticItem1.Caption = "SIM 1"
         Me.BarStaticItem1.Id = 1
-        Me.BarStaticItem1.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px
+        Me.BarStaticItem1.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
         Me.BarStaticItem1.Name = "BarStaticItem1"
         '
         'BarStaticItem2
@@ -92,42 +101,42 @@
         '
         Me.BarStaticItem3.Caption = "SIM 3"
         Me.BarStaticItem3.Id = 3
-        Me.BarStaticItem3.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_2
+        Me.BarStaticItem3.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
         Me.BarStaticItem3.Name = "BarStaticItem3"
         '
         'BarStaticItem4
         '
         Me.BarStaticItem4.Caption = "SIM 4"
         Me.BarStaticItem4.Id = 4
-        Me.BarStaticItem4.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_3
+        Me.BarStaticItem4.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
         Me.BarStaticItem4.Name = "BarStaticItem4"
         '
         'BarStaticItem5
         '
         Me.BarStaticItem5.Caption = "SIM 5"
         Me.BarStaticItem5.Id = 5
-        Me.BarStaticItem5.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_4
+        Me.BarStaticItem5.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
         Me.BarStaticItem5.Name = "BarStaticItem5"
         '
         'BarStaticItem6
         '
         Me.BarStaticItem6.Caption = "SIM 6"
         Me.BarStaticItem6.Id = 6
-        Me.BarStaticItem6.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_5
+        Me.BarStaticItem6.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
         Me.BarStaticItem6.Name = "BarStaticItem6"
         '
         'BarStaticItem11
         '
         Me.BarStaticItem11.Caption = "SIM 7"
         Me.BarStaticItem11.Id = 11
-        Me.BarStaticItem11.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_6
+        Me.BarStaticItem11.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
         Me.BarStaticItem11.Name = "BarStaticItem11"
         '
         'BarStaticItem12
         '
         Me.BarStaticItem12.Caption = "SIM 8"
         Me.BarStaticItem12.Id = 12
-        Me.BarStaticItem12.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_7
+        Me.BarStaticItem12.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
         Me.BarStaticItem12.Name = "BarStaticItem12"
         '
         'BarStaticItem13
@@ -138,15 +147,17 @@
         '
         'BarButtonItem1
         '
-        Me.BarButtonItem1.Caption = "Server Connection"
+        Me.BarButtonItem1.Caption = "Server"
         Me.BarButtonItem1.Id = 14
+        Me.BarButtonItem1.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.database_server_connection_internet_things_line_vector_28087042
         Me.BarButtonItem1.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.database_server_connection_internet_things_line_vector_28087042
         Me.BarButtonItem1.Name = "BarButtonItem1"
         '
         'BarButtonItem2
         '
-        Me.BarButtonItem2.Caption = "Textblast Comport"
+        Me.BarButtonItem2.Caption = "Textblast"
         Me.BarButtonItem2.Id = 15
+        Me.BarButtonItem2.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_USB_On_40px
         Me.BarButtonItem2.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_USB_On_40px
         Me.BarButtonItem2.Name = "BarButtonItem2"
         '
@@ -154,6 +165,7 @@
         '
         Me.message_BTN.Caption = "Message"
         Me.message_BTN.Id = 16
+        Me.message_BTN.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Group_Message_40px
         Me.message_BTN.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Group_Message_40px
         Me.message_BTN.Name = "message_BTN"
         '
@@ -161,6 +173,7 @@
         '
         Me.inbox_BTN.Caption = "Inbox"
         Me.inbox_BTN.Id = 17
+        Me.inbox_BTN.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Inbox_40px_1
         Me.inbox_BTN.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Inbox_40px_1
         Me.inbox_BTN.Name = "inbox_BTN"
         '
@@ -168,6 +181,7 @@
         '
         Me.outbox_BTN.Caption = "Outbox"
         Me.outbox_BTN.Id = 18
+        Me.outbox_BTN.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Sent_40px
         Me.outbox_BTN.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Sent_40px
         Me.outbox_BTN.Name = "outbox_BTN"
         '
@@ -175,6 +189,7 @@
         '
         Me.BarButtonItem6.Caption = "Sim Details"
         Me.BarButtonItem6.Id = 19
+        Me.BarButtonItem6.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Chip_Card_40px1
         Me.BarButtonItem6.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Chip_Card_40px1
         Me.BarButtonItem6.Name = "BarButtonItem6"
         '
@@ -207,21 +222,73 @@
         '
         'DefaultLookAndFeel1
         '
-        Me.DefaultLookAndFeel1.LookAndFeel.SkinName = "Sharp Plus"
+        Me.DefaultLookAndFeel1.LookAndFeel.SkinName = "The Bezier"
         '
         'XtraTabbedMdiManager1
         '
         Me.XtraTabbedMdiManager1.MdiParent = Me
         '
+        'Bar3
+        '
+        Me.Bar3.BarName = "Status bar"
+        Me.Bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom
+        Me.Bar3.DockCol = 0
+        Me.Bar3.DockRow = 0
+        Me.Bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom
+        Me.Bar3.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem4), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem5), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem6)})
+        Me.Bar3.OptionsBar.AllowQuickCustomization = False
+        Me.Bar3.OptionsBar.DrawDragBorder = False
+        Me.Bar3.OptionsBar.UseWholeRow = True
+        Me.Bar3.Text = "Status bar"
+        '
+        'Bar1
+        '
+        Me.Bar1.BarName = "Status bar"
+        Me.Bar1.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom
+        Me.Bar1.DockCol = 0
+        Me.Bar1.DockRow = 0
+        Me.Bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom
+        Me.Bar1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem4), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem5), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem6)})
+        Me.Bar1.OptionsBar.AllowQuickCustomization = False
+        Me.Bar1.OptionsBar.DrawDragBorder = False
+        Me.Bar1.OptionsBar.UseWholeRow = True
+        Me.Bar1.Text = "Status bar"
+        '
+        'RibbonStatusBar1
+        '
+        Me.RibbonStatusBar1.ItemLinks.Add(Me.SkinRibbonGalleryBarItem1)
+        Me.RibbonStatusBar1.ItemLinks.Add(Me.BarStaticItem7)
+        Me.RibbonStatusBar1.Location = New System.Drawing.Point(0, 424)
+        Me.RibbonStatusBar1.Name = "RibbonStatusBar1"
+        Me.RibbonStatusBar1.Ribbon = Me.ribbonControl1
+        Me.RibbonStatusBar1.Size = New System.Drawing.Size(1028, 26)
+        '
+        'SkinRibbonGalleryBarItem1
+        '
+        Me.SkinRibbonGalleryBarItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
+        Me.SkinRibbonGalleryBarItem1.Caption = "Skin Gallery"
+        Me.SkinRibbonGalleryBarItem1.Id = 145
+        Me.SkinRibbonGalleryBarItem1.Name = "SkinRibbonGalleryBarItem1"
+        '
+        'BarStaticItem7
+        '
+        Me.BarStaticItem7.Caption = "Developed By: JM Dammay (johnmarlodammay.dev@gmail.com)"
+        Me.BarStaticItem7.Id = 146
+        Me.BarStaticItem7.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 8.5!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.BarStaticItem7.ItemAppearance.Normal.Options.UseFont = True
+        Me.BarStaticItem7.Name = "BarStaticItem7"
+        '
         'frm_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1018, 449)
+        Me.ClientSize = New System.Drawing.Size(1028, 450)
+        Me.Controls.Add(Me.RibbonStatusBar1)
         Me.Controls.Add(Me.ribbonControl1)
         Me.IsMdiContainer = True
         Me.Name = "frm_Main"
         Me.Ribbon = Me.ribbonControl1
+        Me.StatusBar = Me.RibbonStatusBar1
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -255,4 +322,9 @@
     Friend WithEvents outbox_BTN As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem6 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents XtraTabbedMdiManager1 As DevExpress.XtraTabbedMdi.XtraTabbedMdiManager
+    Friend WithEvents SkinRibbonGalleryBarItem1 As DevExpress.XtraBars.SkinRibbonGalleryBarItem
+    Friend WithEvents BarStaticItem7 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents RibbonStatusBar1 As DevExpress.XtraBars.Ribbon.RibbonStatusBar
+    Friend WithEvents Bar3 As DevExpress.XtraBars.Bar
+    Friend WithEvents Bar1 As DevExpress.XtraBars.Bar
 End Class

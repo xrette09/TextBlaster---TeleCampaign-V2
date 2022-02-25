@@ -6,7 +6,7 @@ Partial Public Class frm_Main
 
     Public frmmessage As New frm_Message
     Public frminbox As New frm_Inbox
-    Public frmoutbox As New frm_Outbox
+    Public frmsentbox As New frm_Sentbox
 
     Shared Sub New()
         DevExpress.UserSkins.BonusSkins.Register()
@@ -53,16 +53,16 @@ Partial Public Class frm_Main
     End Sub
 
     Private Sub outbox_BTN_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles outbox_BTN.ItemClick
-        frmoutbox = New frm_Outbox
+        frmsentbox = New frm_Sentbox
 
         Try
-            If Application.OpenForms.OfType(Of frm_Outbox).Any Then
-                Application.OpenForms.Item("frm_Outbox").Activate()
+            If Application.OpenForms.OfType(Of frm_Sentbox).Any Then
+                Application.OpenForms.Item("frm_Sentbox").Activate()
             Else
-                frmoutbox.MdiParent = Me
-                frmoutbox.TopMost = True
-                frmoutbox.WindowState = FormWindowState.Maximized
-                frmoutbox.Show()
+                frmsentbox.MdiParent = Me
+                frmsentbox.TopMost = True
+                frmsentbox.WindowState = FormWindowState.Maximized
+                frmsentbox.Show()
             End If
 
         Catch ex As Exception
