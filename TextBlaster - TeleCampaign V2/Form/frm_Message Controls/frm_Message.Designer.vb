@@ -22,9 +22,9 @@ Partial Class frm_Message
         Me.components = New System.ComponentModel.Container()
         Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
         Me.Bar1 = New DevExpress.XtraBars.Bar()
-        Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
+        Me.messageList_BTN = New DevExpress.XtraBars.BarButtonItem()
+        Me.individualMessage_BTN = New DevExpress.XtraBars.BarButtonItem()
+        Me.deliveryStatus_BTN = New DevExpress.XtraBars.BarButtonItem()
         Me.Bar2 = New DevExpress.XtraBars.Bar()
         Me.Bar3 = New DevExpress.XtraBars.Bar()
         Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
@@ -33,7 +33,7 @@ Partial Class frm_Message
         Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
         Me.ALL = New DevExpress.XtraEditors.PanelControl()
         Me.Control_MessageList1 = New TextBlaster___TeleCampaign_V2.control_MessageList()
-        Me.Control_Sim11 = New TextBlaster___TeleCampaign_V2.control_SMS()
+        Me.Control_SMS1 = New TextBlaster___TeleCampaign_V2.control_SMS()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ALL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ALL.SuspendLayout()
@@ -47,7 +47,7 @@ Partial Class frm_Message
         Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
         Me.BarManager1.DockControls.Add(Me.barDockControlRight)
         Me.BarManager1.Form = Me
-        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3})
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.messageList_BTN, Me.individualMessage_BTN, Me.deliveryStatus_BTN})
         Me.BarManager1.MainMenu = Me.Bar2
         Me.BarManager1.MaxItemId = 3
         Me.BarManager1.StatusBar = Me.Bar3
@@ -58,31 +58,35 @@ Partial Class frm_Message
         Me.Bar1.DockCol = 0
         Me.Bar1.DockRow = 0
         Me.Bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
-        Me.Bar1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarButtonItem2, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarButtonItem3, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)})
+        Me.Bar1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.messageList_BTN, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.individualMessage_BTN, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.deliveryStatus_BTN, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)})
         Me.Bar1.Text = "Tools"
         '
-        'BarButtonItem1
+        'messageList_BTN
         '
-        Me.BarButtonItem1.Caption = "Message List"
-        Me.BarButtonItem1.Id = 0
-        Me.BarButtonItem1.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Sent_25px1
-        Me.BarButtonItem1.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BarButtonItem1.ItemAppearance.Normal.Options.UseFont = True
-        Me.BarButtonItem1.Name = "BarButtonItem1"
+        Me.messageList_BTN.Caption = "Message List"
+        Me.messageList_BTN.Id = 0
+        Me.messageList_BTN.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Sent_25px1
+        Me.messageList_BTN.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 8.0!)
+        Me.messageList_BTN.ItemAppearance.Normal.Options.UseFont = True
+        Me.messageList_BTN.Name = "messageList_BTN"
         '
-        'BarButtonItem2
+        'individualMessage_BTN
         '
-        Me.BarButtonItem2.Caption = "Individual Message"
-        Me.BarButtonItem2.Id = 1
-        Me.BarButtonItem2.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_ID_Card_25px
-        Me.BarButtonItem2.Name = "BarButtonItem2"
+        Me.individualMessage_BTN.Caption = "Individual Message"
+        Me.individualMessage_BTN.Id = 1
+        Me.individualMessage_BTN.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_ID_Card_25px
+        Me.individualMessage_BTN.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 8.0!)
+        Me.individualMessage_BTN.ItemAppearance.Normal.Options.UseFont = True
+        Me.individualMessage_BTN.Name = "individualMessage_BTN"
         '
-        'BarButtonItem3
+        'deliveryStatus_BTN
         '
-        Me.BarButtonItem3.Caption = "Delivery Status"
-        Me.BarButtonItem3.Id = 2
-        Me.BarButtonItem3.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_In_Transit_25px
-        Me.BarButtonItem3.Name = "BarButtonItem3"
+        Me.deliveryStatus_BTN.Caption = "Delivery Status"
+        Me.deliveryStatus_BTN.Id = 2
+        Me.deliveryStatus_BTN.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_In_Transit_25px
+        Me.deliveryStatus_BTN.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 8.0!)
+        Me.deliveryStatus_BTN.ItemAppearance.Normal.Options.UseFont = True
+        Me.deliveryStatus_BTN.Name = "deliveryStatus_BTN"
         '
         'Bar2
         '
@@ -114,40 +118,40 @@ Partial Class frm_Message
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(974, 50)
+        Me.barDockControlTop.Size = New System.Drawing.Size(974, 53)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 443)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 438)
         Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(974, 18)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(974, 23)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 50)
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 53)
         Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 393)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 385)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(974, 50)
+        Me.barDockControlRight.Location = New System.Drawing.Point(974, 53)
         Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 393)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 385)
         '
         'ALL
         '
         Me.ALL.Controls.Add(Me.Control_MessageList1)
-        Me.ALL.Controls.Add(Me.Control_Sim11)
+        Me.ALL.Controls.Add(Me.Control_SMS1)
         Me.ALL.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ALL.Location = New System.Drawing.Point(0, 50)
+        Me.ALL.Location = New System.Drawing.Point(0, 53)
         Me.ALL.Name = "ALL"
-        Me.ALL.Size = New System.Drawing.Size(974, 393)
+        Me.ALL.Size = New System.Drawing.Size(974, 385)
         Me.ALL.TabIndex = 4
         '
         'Control_MessageList1
@@ -155,16 +159,16 @@ Partial Class frm_Message
         Me.Control_MessageList1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Control_MessageList1.Location = New System.Drawing.Point(2, 2)
         Me.Control_MessageList1.Name = "Control_MessageList1"
-        Me.Control_MessageList1.Size = New System.Drawing.Size(970, 389)
+        Me.Control_MessageList1.Size = New System.Drawing.Size(970, 381)
         Me.Control_MessageList1.TabIndex = 1
         '
-        'Control_Sim11
+        'Control_SMS1
         '
-        Me.Control_Sim11.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Control_Sim11.Location = New System.Drawing.Point(2, 2)
-        Me.Control_Sim11.Name = "Control_Sim11"
-        Me.Control_Sim11.Size = New System.Drawing.Size(970, 389)
-        Me.Control_Sim11.TabIndex = 0
+        Me.Control_SMS1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Control_SMS1.Location = New System.Drawing.Point(2, 2)
+        Me.Control_SMS1.Name = "Control_SMS1"
+        Me.Control_SMS1.Size = New System.Drawing.Size(970, 381)
+        Me.Control_SMS1.TabIndex = 2
         '
         'frm_Message
         '
@@ -197,10 +201,10 @@ Partial Class frm_Message
     Friend WithEvents barDockControlBottom As DevExpress.XtraBars.BarDockControl
     Friend WithEvents barDockControlLeft As DevExpress.XtraBars.BarDockControl
     Friend WithEvents barDockControlRight As DevExpress.XtraBars.BarDockControl
-    Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem2 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem3 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents messageList_BTN As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents individualMessage_BTN As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents deliveryStatus_BTN As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents ALL As DevExpress.XtraEditors.PanelControl
-    Friend WithEvents Control_Sim11 As control_SMS
     Friend WithEvents Control_MessageList1 As control_MessageList
+    Friend WithEvents Control_SMS1 As control_SMS
 End Class

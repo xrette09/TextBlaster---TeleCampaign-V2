@@ -21,28 +21,31 @@
       <Value Profile="(Default)">dbvoters</Value>
     </Setting>
     <Setting Name="sim1Port" Type="System.String" Scope="User">
-      <Value Profile="(Default)">COM15</Value>
+      <Value Profile="(Default)">COM1</Value>
     </Setting>
     <Setting Name="sim2Port" Type="System.String" Scope="User">
-      <Value Profile="(Default)">COM16</Value>
+      <Value Profile="(Default)">COM2</Value>
     </Setting>
     <Setting Name="sim3Port" Type="System.String" Scope="User">
-      <Value Profile="(Default)">COM17</Value>
+      <Value Profile="(Default)">COM3</Value>
     </Setting>
     <Setting Name="sim4Port" Type="System.String" Scope="User">
-      <Value Profile="(Default)">COM18</Value>
+      <Value Profile="(Default)">COM4</Value>
     </Setting>
     <Setting Name="sim5Port" Type="System.String" Scope="User">
-      <Value Profile="(Default)">COM19</Value>
+      <Value Profile="(Default)">COM5</Value>
     </Setting>
     <Setting Name="sim6Port" Type="System.String" Scope="User">
-      <Value Profile="(Default)">COM20</Value>
+      <Value Profile="(Default)">COM6</Value>
     </Setting>
     <Setting Name="sim7Port" Type="System.String" Scope="User">
-      <Value Profile="(Default)">COM21</Value>
+      <Value Profile="(Default)">COM7</Value>
     </Setting>
     <Setting Name="sim8Port" Type="System.String" Scope="User">
-      <Value Profile="(Default)">COM22</Value>
+      <Value Profile="(Default)">COM8</Value>
+    </Setting>
+    <Setting Name="dbase_TextBlast" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dbTextBlast</Value>
     </Setting>
   </Settings>
 </SettingsFile>

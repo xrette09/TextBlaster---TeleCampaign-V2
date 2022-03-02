@@ -127,7 +127,7 @@ Partial Friend NotInheritable Class Settings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("COM15")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("COM1")>  _
     Public Property sim1Port() As String
         Get
             Return CType(Me("sim1Port"),String)
@@ -139,7 +139,7 @@ Partial Friend NotInheritable Class Settings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("COM16")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("COM2")>  _
     Public Property sim2Port() As String
         Get
             Return CType(Me("sim2Port"),String)
@@ -151,7 +151,7 @@ Partial Friend NotInheritable Class Settings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("COM17")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("COM3")>  _
     Public Property sim3Port() As String
         Get
             Return CType(Me("sim3Port"),String)
@@ -163,7 +163,7 @@ Partial Friend NotInheritable Class Settings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("COM18")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("COM4")>  _
     Public Property sim4Port() As String
         Get
             Return CType(Me("sim4Port"),String)
@@ -175,7 +175,7 @@ Partial Friend NotInheritable Class Settings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("COM19")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("COM5")>  _
     Public Property sim5Port() As String
         Get
             Return CType(Me("sim5Port"),String)
@@ -187,7 +187,7 @@ Partial Friend NotInheritable Class Settings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("COM20")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("COM6")>  _
     Public Property sim6Port() As String
         Get
             Return CType(Me("sim6Port"),String)
@@ -199,7 +199,7 @@ Partial Friend NotInheritable Class Settings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("COM21")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("COM7")>  _
     Public Property sim7Port() As String
         Get
             Return CType(Me("sim7Port"),String)
@@ -211,13 +211,25 @@ Partial Friend NotInheritable Class Settings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("COM22")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("COM8")>  _
     Public Property sim8Port() As String
         Get
             Return CType(Me("sim8Port"),String)
         End Get
         Set
             Me("sim8Port") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("dbTextBlast")>  _
+    Public Property dbase_TextBlast() As String
+        Get
+            Return CType(Me("dbase_TextBlast"),String)
+        End Get
+        Set
+            Me("dbase_TextBlast") = value
         End Set
     End Property
 End Class

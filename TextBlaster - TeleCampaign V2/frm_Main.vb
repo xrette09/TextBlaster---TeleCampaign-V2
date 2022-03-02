@@ -69,4 +69,8 @@ Partial Public Class frm_Main
             MessageBox.Show("ERROR: frm_Main -> outbox_BTN_ItemClick" & vbCrLf & vbCrLf & ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
     End Sub
+
+    Private Sub BarStaticItem1_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarStaticItem1.ItemClick
+        frmmessage.Control_SMS1.BringToFront()
+    End Sub
 End Class

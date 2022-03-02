@@ -20,14 +20,11 @@ Partial Class frm_ComposeMessage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_ComposeMessage))
-        Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.ALL = New DevExpress.XtraEditors.PanelControl()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
         Me.sampleMessage_LBL = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.MemoEdit1 = New DevExpress.XtraEditors.MemoEdit()
-        Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.footer_TB = New DevExpress.XtraEditors.TextEdit()
         Me.footer_CB = New System.Windows.Forms.CheckBox()
@@ -38,19 +35,17 @@ Partial Class frm_ComposeMessage
         Me.header_TB = New DevExpress.XtraEditors.TextEdit()
         Me.header_CB = New System.Windows.Forms.CheckBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.modeCBE = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.mode_CBE = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
         Me.PanelControl4 = New DevExpress.XtraEditors.PanelControl()
         Me.exit_BTN = New DevExpress.XtraEditors.SimpleButton()
         Me.save_BTN = New DevExpress.XtraEditors.SimpleButton()
-        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl1.SuspendLayout()
+        CType(Me.ALL, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ALL.SuspendLayout()
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl2.SuspendLayout()
         CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl3.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        CType(Me.MemoEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.footer_TB.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -58,24 +53,24 @@ Partial Class frm_ComposeMessage
         Me.Panel5.SuspendLayout()
         CType(Me.header_TB.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
-        CType(Me.modeCBE.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.mode_CBE.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelControl4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl4.SuspendLayout()
         Me.SuspendLayout()
         '
-        'PanelControl1
+        'ALL
         '
-        Me.PanelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.PanelControl1.Controls.Add(Me.PanelControl2)
-        Me.PanelControl1.Controls.Add(Me.PanelControl3)
-        Me.PanelControl1.Controls.Add(Me.PanelControl4)
-        Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
-        Me.PanelControl1.LookAndFeel.UseDefaultLookAndFeel = False
-        Me.PanelControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(441, 441)
-        Me.PanelControl1.TabIndex = 0
+        Me.ALL.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.ALL.Controls.Add(Me.PanelControl2)
+        Me.ALL.Controls.Add(Me.PanelControl3)
+        Me.ALL.Controls.Add(Me.PanelControl4)
+        Me.ALL.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ALL.Location = New System.Drawing.Point(0, 0)
+        Me.ALL.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.ALL.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ALL.Name = "ALL"
+        Me.ALL.Size = New System.Drawing.Size(441, 410)
+        Me.ALL.TabIndex = 0
         '
         'PanelControl2
         '
@@ -85,11 +80,11 @@ Partial Class frm_ComposeMessage
         Me.PanelControl2.Controls.Add(Me.sampleMessage_LBL)
         Me.PanelControl2.Controls.Add(Me.LabelControl1)
         Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelControl2.Location = New System.Drawing.Point(0, 217)
+        Me.PanelControl2.Location = New System.Drawing.Point(0, 189)
         Me.PanelControl2.LookAndFeel.UseDefaultLookAndFeel = False
         Me.PanelControl2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(441, 180)
+        Me.PanelControl2.Size = New System.Drawing.Size(441, 177)
         Me.PanelControl2.TabIndex = 0
         '
         'sampleMessage_LBL
@@ -107,7 +102,7 @@ Partial Class frm_ComposeMessage
         Me.sampleMessage_LBL.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.sampleMessage_LBL.Name = "sampleMessage_LBL"
         Me.sampleMessage_LBL.Padding = New System.Windows.Forms.Padding(10)
-        Me.sampleMessage_LBL.Size = New System.Drawing.Size(437, 153)
+        Me.sampleMessage_LBL.Size = New System.Drawing.Size(437, 150)
         Me.sampleMessage_LBL.TabIndex = 1
         Me.sampleMessage_LBL.Text = "Try to type message in Message Box."
         '
@@ -128,7 +123,6 @@ Partial Class frm_ComposeMessage
         'PanelControl3
         '
         Me.PanelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
-        Me.PanelControl3.Controls.Add(Me.Panel3)
         Me.PanelControl3.Controls.Add(Me.Panel1)
         Me.PanelControl3.Controls.Add(Me.Panel2)
         Me.PanelControl3.Controls.Add(Me.Panel5)
@@ -137,44 +131,8 @@ Partial Class frm_ComposeMessage
         Me.PanelControl3.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelControl3.Name = "PanelControl3"
-        Me.PanelControl3.Size = New System.Drawing.Size(441, 217)
+        Me.PanelControl3.Size = New System.Drawing.Size(441, 189)
         Me.PanelControl3.TabIndex = 1
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.Transparent
-        Me.Panel3.Controls.Add(Me.MemoEdit1)
-        Me.Panel3.Controls.Add(Me.LabelControl2)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(2, 216)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel3.Size = New System.Drawing.Size(437, 130)
-        Me.Panel3.TabIndex = 34
-        '
-        'MemoEdit1
-        '
-        Me.MemoEdit1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MemoEdit1.Location = New System.Drawing.Point(90, 2)
-        Me.MemoEdit1.Name = "MemoEdit1"
-        Me.MemoEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat
-        Me.MemoEdit1.Properties.LookAndFeel.UseDefaultLookAndFeel = False
-        Me.MemoEdit1.Size = New System.Drawing.Size(344, 126)
-        Me.MemoEdit1.TabIndex = 22
-        '
-        'LabelControl2
-        '
-        Me.LabelControl2.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelControl2.Appearance.Options.UseFont = True
-        Me.LabelControl2.Appearance.Options.UseTextOptions = True
-        Me.LabelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-        Me.LabelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-        Me.LabelControl2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.LabelControl2.Location = New System.Drawing.Point(3, 2)
-        Me.LabelControl2.Name = "LabelControl2"
-        Me.LabelControl2.Size = New System.Drawing.Size(87, 126)
-        Me.LabelControl2.TabIndex = 23
-        Me.LabelControl2.Text = "Message:  "
         '
         'Panel1
         '
@@ -185,7 +143,7 @@ Partial Class frm_ComposeMessage
         Me.Panel1.Location = New System.Drawing.Point(2, 188)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel1.Size = New System.Drawing.Size(437, 28)
+        Me.Panel1.Size = New System.Drawing.Size(437, 0)
         Me.Panel1.TabIndex = 33
         '
         'footer_TB
@@ -197,7 +155,7 @@ Partial Class frm_ComposeMessage
         Me.footer_TB.Properties.AutoHeight = False
         Me.footer_TB.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat
         Me.footer_TB.Properties.LookAndFeel.UseDefaultLookAndFeel = False
-        Me.footer_TB.Size = New System.Drawing.Size(359, 24)
+        Me.footer_TB.Size = New System.Drawing.Size(359, 0)
         Me.footer_TB.TabIndex = 26
         '
         'footer_CB
@@ -209,7 +167,7 @@ Partial Class frm_ComposeMessage
         Me.footer_CB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.footer_CB.Name = "footer_CB"
         Me.footer_CB.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.footer_CB.Size = New System.Drawing.Size(72, 24)
+        Me.footer_CB.Size = New System.Drawing.Size(72, 0)
         Me.footer_CB.TabIndex = 25
         Me.footer_CB.Text = "Footer:"
         Me.footer_CB.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -266,6 +224,7 @@ Partial Class frm_ComposeMessage
         'header_TB
         '
         Me.header_TB.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.header_TB.Enabled = False
         Me.header_TB.Location = New System.Drawing.Point(79, 2)
         Me.header_TB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.header_TB.Name = "header_TB"
@@ -293,7 +252,7 @@ Partial Class frm_ComposeMessage
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.Transparent
-        Me.Panel4.Controls.Add(Me.modeCBE)
+        Me.Panel4.Controls.Add(Me.mode_CBE)
         Me.Panel4.Controls.Add(Me.LabelControl3)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(2, 2)
@@ -302,20 +261,20 @@ Partial Class frm_ComposeMessage
         Me.Panel4.Size = New System.Drawing.Size(437, 28)
         Me.Panel4.TabIndex = 29
         '
-        'modeCBE
+        'mode_CBE
         '
-        Me.modeCBE.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.modeCBE.EditValue = "Simple Message"
-        Me.modeCBE.Location = New System.Drawing.Point(90, 2)
-        Me.modeCBE.Name = "modeCBE"
-        Me.modeCBE.Properties.AutoHeight = False
-        Me.modeCBE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat
-        Me.modeCBE.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.modeCBE.Properties.Items.AddRange(New Object() {"Simple Message", "With Name (English)", "With Name (Tagalog)", "With Seat Number (English)", "With Seat Number (Tagalog)"})
-        Me.modeCBE.Properties.LookAndFeel.UseDefaultLookAndFeel = False
-        Me.modeCBE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
-        Me.modeCBE.Size = New System.Drawing.Size(344, 24)
-        Me.modeCBE.TabIndex = 1
+        Me.mode_CBE.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.mode_CBE.EditValue = "Simple Message"
+        Me.mode_CBE.Location = New System.Drawing.Point(90, 2)
+        Me.mode_CBE.Name = "mode_CBE"
+        Me.mode_CBE.Properties.AutoHeight = False
+        Me.mode_CBE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat
+        Me.mode_CBE.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.mode_CBE.Properties.Items.AddRange(New Object() {"Simple Message", "With Name (English)", "With Name (Tagalog)", "With Seat Number (English)", "With Seat Number (Tagalog)"})
+        Me.mode_CBE.Properties.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.mode_CBE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
+        Me.mode_CBE.Size = New System.Drawing.Size(344, 24)
+        Me.mode_CBE.TabIndex = 1
         '
         'LabelControl3
         '
@@ -339,7 +298,7 @@ Partial Class frm_ComposeMessage
         Me.PanelControl4.Controls.Add(Me.exit_BTN)
         Me.PanelControl4.Controls.Add(Me.save_BTN)
         Me.PanelControl4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelControl4.Location = New System.Drawing.Point(0, 397)
+        Me.PanelControl4.Location = New System.Drawing.Point(0, 366)
         Me.PanelControl4.LookAndFeel.UseDefaultLookAndFeel = False
         Me.PanelControl4.Name = "PanelControl4"
         Me.PanelControl4.Size = New System.Drawing.Size(441, 44)
@@ -373,22 +332,20 @@ Partial Class frm_ComposeMessage
         Me.Appearance.Options.UseForeColor = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(441, 441)
-        Me.Controls.Add(Me.PanelControl1)
+        Me.ClientSize = New System.Drawing.Size(441, 410)
+        Me.Controls.Add(Me.ALL)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frm_ComposeMessage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Message"
-        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl1.ResumeLayout(False)
+        CType(Me.ALL, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ALL.ResumeLayout(False)
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl2.ResumeLayout(False)
         CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl3.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        CType(Me.MemoEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.footer_TB.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -398,20 +355,20 @@ Partial Class frm_ComposeMessage
         Me.Panel5.PerformLayout()
         CType(Me.header_TB.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
-        CType(Me.modeCBE.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.mode_CBE.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelControl4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
+    Friend WithEvents ALL As DevExpress.XtraEditors.PanelControl
     Friend WithEvents PanelControl3 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents PanelControl2 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents sampleMessage_LBL As DevExpress.XtraEditors.LabelControl
     Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents modeCBE As DevExpress.XtraEditors.ComboBoxEdit
+    Friend WithEvents mode_CBE As DevExpress.XtraEditors.ComboBoxEdit
     Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents Panel1 As Panel
     Friend WithEvents footer_TB As DevExpress.XtraEditors.TextEdit
@@ -422,9 +379,6 @@ Partial Class frm_ComposeMessage
     Friend WithEvents PanelControl4 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents exit_BTN As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents save_BTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents MemoEdit1 As DevExpress.XtraEditors.MemoEdit
-    Friend WithEvents LabelControl2 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents Panel5 As Panel
     Friend WithEvents header_TB As DevExpress.XtraEditors.TextEdit
     Friend WithEvents header_CB As CheckBox

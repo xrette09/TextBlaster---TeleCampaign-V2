@@ -42,17 +42,17 @@
         Me.inbox_BTN = New DevExpress.XtraBars.BarButtonItem()
         Me.outbox_BTN = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem6 = New DevExpress.XtraBars.BarButtonItem()
+        Me.SkinRibbonGalleryBarItem1 = New DevExpress.XtraBars.SkinRibbonGalleryBarItem()
+        Me.BarStaticItem7 = New DevExpress.XtraBars.BarStaticItem()
         Me.ribbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.ribbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonStatusBar1 = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
         Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
         Me.Bar3 = New DevExpress.XtraBars.Bar()
         Me.Bar1 = New DevExpress.XtraBars.Bar()
-        Me.RibbonStatusBar1 = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
-        Me.SkinRibbonGalleryBarItem1 = New DevExpress.XtraBars.SkinRibbonGalleryBarItem()
-        Me.BarStaticItem7 = New DevExpress.XtraBars.BarStaticItem()
         CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -193,6 +193,21 @@
         Me.BarButtonItem6.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Chip_Card_40px1
         Me.BarButtonItem6.Name = "BarButtonItem6"
         '
+        'SkinRibbonGalleryBarItem1
+        '
+        Me.SkinRibbonGalleryBarItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
+        Me.SkinRibbonGalleryBarItem1.Caption = "Skin Gallery"
+        Me.SkinRibbonGalleryBarItem1.Id = 145
+        Me.SkinRibbonGalleryBarItem1.Name = "SkinRibbonGalleryBarItem1"
+        '
+        'BarStaticItem7
+        '
+        Me.BarStaticItem7.Caption = "Developed By: JM Dammay (johnmarlodammay.dev@gmail.com)"
+        Me.BarStaticItem7.Id = 146
+        Me.BarStaticItem7.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 8.5!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.BarStaticItem7.ItemAppearance.Normal.Options.UseFont = True
+        Me.BarStaticItem7.Name = "BarStaticItem7"
+        '
         'ribbonPage1
         '
         Me.ribbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.ribbonPageGroup1, Me.RibbonPageGroup2, Me.RibbonPageGroup3})
@@ -219,6 +234,15 @@
         Me.RibbonPageGroup3.ItemLinks.Add(Me.BarButtonItem6)
         Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
         Me.RibbonPageGroup3.Text = "SIM CARD INFO"
+        '
+        'RibbonStatusBar1
+        '
+        Me.RibbonStatusBar1.ItemLinks.Add(Me.SkinRibbonGalleryBarItem1)
+        Me.RibbonStatusBar1.ItemLinks.Add(Me.BarStaticItem7)
+        Me.RibbonStatusBar1.Location = New System.Drawing.Point(0, 424)
+        Me.RibbonStatusBar1.Name = "RibbonStatusBar1"
+        Me.RibbonStatusBar1.Ribbon = Me.ribbonControl1
+        Me.RibbonStatusBar1.Size = New System.Drawing.Size(1028, 26)
         '
         'DefaultLookAndFeel1
         '
@@ -253,30 +277,6 @@
         Me.Bar1.OptionsBar.DrawDragBorder = False
         Me.Bar1.OptionsBar.UseWholeRow = True
         Me.Bar1.Text = "Status bar"
-        '
-        'RibbonStatusBar1
-        '
-        Me.RibbonStatusBar1.ItemLinks.Add(Me.SkinRibbonGalleryBarItem1)
-        Me.RibbonStatusBar1.ItemLinks.Add(Me.BarStaticItem7)
-        Me.RibbonStatusBar1.Location = New System.Drawing.Point(0, 424)
-        Me.RibbonStatusBar1.Name = "RibbonStatusBar1"
-        Me.RibbonStatusBar1.Ribbon = Me.ribbonControl1
-        Me.RibbonStatusBar1.Size = New System.Drawing.Size(1028, 26)
-        '
-        'SkinRibbonGalleryBarItem1
-        '
-        Me.SkinRibbonGalleryBarItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
-        Me.SkinRibbonGalleryBarItem1.Caption = "Skin Gallery"
-        Me.SkinRibbonGalleryBarItem1.Id = 145
-        Me.SkinRibbonGalleryBarItem1.Name = "SkinRibbonGalleryBarItem1"
-        '
-        'BarStaticItem7
-        '
-        Me.BarStaticItem7.Caption = "Developed By: JM Dammay (johnmarlodammay.dev@gmail.com)"
-        Me.BarStaticItem7.Id = 146
-        Me.BarStaticItem7.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 8.5!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.BarStaticItem7.ItemAppearance.Normal.Options.UseFont = True
-        Me.BarStaticItem7.Name = "BarStaticItem7"
         '
         'frm_Main
         '

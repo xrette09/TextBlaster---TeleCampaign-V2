@@ -103,10 +103,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\SMS_API.vb" />
+    <Compile Include="API\SqlServer_API.vb" />
     <Compile Include="Form\frm_ComposeMessage.designer.vb">
       <DependentUpon>frm_ComposeMessage.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\frm_ComposeMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_Coordinators.designer.vb">
+      <DependentUpon>frm_Coordinators.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_Coordinators.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\frm_Inbox.Designer.vb">
@@ -145,10 +152,10 @@
     <Compile Include="frm_Main.Designer.vb">
       <DependentUpon>frm_Main.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\frm_Message.Designer.vb">
+    <Compile Include="Form\frm_Message Controls\frm_Message.Designer.vb">
       <DependentUpon>frm_Message.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\frm_Message.vb">
+    <Compile Include="Form\frm_Message Controls\frm_Message.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GlobalSuppressions.vb" />
@@ -159,6 +166,9 @@
     <Compile Include="My Project\AssemblyInfo.vb" />
     <EmbeddedResource Include="Form\frm_ComposeMessage.resx">
       <DependentUpon>frm_ComposeMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_Coordinators.resx">
+      <DependentUpon>frm_Coordinators.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_Inbox.resx">
       <DependentUpon>frm_Inbox.vb</DependentUpon>
@@ -172,7 +182,7 @@
     <EmbeddedResource Include="Form\frm_Message Controls\control_SMS.resx">
       <DependentUpon>control_SMS.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frm_Message.resx">
+    <EmbeddedResource Include="Form\frm_Message Controls\frm_Message.resx">
       <DependentUpon>frm_Message.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frm_Sentbox.resx">
