@@ -27,27 +27,27 @@
         Me.components = New System.ComponentModel.Container()
         Dim SplashScreenManager1 As DevExpress.XtraSplashScreen.SplashScreenManager = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, Nothing, True, True)
         Me.ribbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
-        Me.BarStaticItem1 = New DevExpress.XtraBars.BarStaticItem()
-        Me.BarStaticItem2 = New DevExpress.XtraBars.BarStaticItem()
-        Me.BarStaticItem3 = New DevExpress.XtraBars.BarStaticItem()
-        Me.BarStaticItem4 = New DevExpress.XtraBars.BarStaticItem()
-        Me.BarStaticItem5 = New DevExpress.XtraBars.BarStaticItem()
-        Me.BarStaticItem6 = New DevExpress.XtraBars.BarStaticItem()
-        Me.BarStaticItem11 = New DevExpress.XtraBars.BarStaticItem()
-        Me.BarStaticItem12 = New DevExpress.XtraBars.BarStaticItem()
+        Me.sim1Stat_LBL = New DevExpress.XtraBars.BarStaticItem()
+        Me.sim2Stat_LBL = New DevExpress.XtraBars.BarStaticItem()
+        Me.sim3Stat_LBL = New DevExpress.XtraBars.BarStaticItem()
+        Me.Sim4Stat_LBL = New DevExpress.XtraBars.BarStaticItem()
+        Me.Sim5Stat_LBL = New DevExpress.XtraBars.BarStaticItem()
+        Me.sim6Stat_LBL = New DevExpress.XtraBars.BarStaticItem()
+        Me.sim7Stat_LBL = New DevExpress.XtraBars.BarStaticItem()
+        Me.sim8Stat_LBL = New DevExpress.XtraBars.BarStaticItem()
         Me.BarStaticItem13 = New DevExpress.XtraBars.BarStaticItem()
-        Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
+        Me.server_BTN = New DevExpress.XtraBars.BarButtonItem()
+        Me.textblast_BTN = New DevExpress.XtraBars.BarButtonItem()
         Me.message_BTN = New DevExpress.XtraBars.BarButtonItem()
         Me.inbox_BTN = New DevExpress.XtraBars.BarButtonItem()
         Me.outbox_BTN = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem6 = New DevExpress.XtraBars.BarButtonItem()
+        Me.simDetails_BTN = New DevExpress.XtraBars.BarButtonItem()
         Me.SkinRibbonGalleryBarItem1 = New DevExpress.XtraBars.SkinRibbonGalleryBarItem()
         Me.BarStaticItem7 = New DevExpress.XtraBars.BarStaticItem()
         Me.ribbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
-        Me.ribbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.server_GRP = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.messaging_GRP = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.details_GRP = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar1 = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
         Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
@@ -65,79 +65,79 @@
         '
         Me.ribbonControl1.AutoHideEmptyItems = True
         Me.ribbonControl1.ExpandCollapseItem.Id = 0
-        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.BarStaticItem1, Me.BarStaticItem2, Me.BarStaticItem3, Me.BarStaticItem4, Me.BarStaticItem5, Me.BarStaticItem6, Me.BarStaticItem11, Me.BarStaticItem12, Me.BarStaticItem13, Me.BarButtonItem1, Me.BarButtonItem2, Me.message_BTN, Me.inbox_BTN, Me.outbox_BTN, Me.BarButtonItem6, Me.SkinRibbonGalleryBarItem1, Me.BarStaticItem7})
+        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.sim1Stat_LBL, Me.sim2Stat_LBL, Me.sim3Stat_LBL, Me.Sim4Stat_LBL, Me.Sim5Stat_LBL, Me.sim6Stat_LBL, Me.sim7Stat_LBL, Me.sim8Stat_LBL, Me.BarStaticItem13, Me.server_BTN, Me.textblast_BTN, Me.message_BTN, Me.inbox_BTN, Me.outbox_BTN, Me.simDetails_BTN, Me.SkinRibbonGalleryBarItem1, Me.BarStaticItem7})
         Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
         Me.ribbonControl1.MaxItemId = 147
         Me.ribbonControl1.Name = "ribbonControl1"
-        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem1)
-        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem2)
-        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem3)
-        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem4)
-        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem5)
-        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem6)
-        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem11)
-        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.BarStaticItem12)
+        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.sim1Stat_LBL)
+        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.sim2Stat_LBL)
+        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.sim3Stat_LBL)
+        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.Sim4Stat_LBL)
+        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.Sim5Stat_LBL)
+        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.sim6Stat_LBL)
+        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.sim7Stat_LBL)
+        Me.ribbonControl1.PageHeaderItemLinks.Add(Me.sim8Stat_LBL)
         Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.ribbonPage1})
         Me.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.TabletOffice
         Me.ribbonControl1.Size = New System.Drawing.Size(1028, 87)
         Me.ribbonControl1.StatusBar = Me.RibbonStatusBar1
         Me.ribbonControl1.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.[True]
         '
-        'BarStaticItem1
+        'sim1Stat_LBL
         '
-        Me.BarStaticItem1.Caption = "SIM 1"
-        Me.BarStaticItem1.Id = 1
-        Me.BarStaticItem1.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
-        Me.BarStaticItem1.Name = "BarStaticItem1"
+        Me.sim1Stat_LBL.Caption = "SIM 1"
+        Me.sim1Stat_LBL.Id = 1
+        Me.sim1Stat_LBL.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
+        Me.sim1Stat_LBL.Name = "sim1Stat_LBL"
         '
-        'BarStaticItem2
+        'sim2Stat_LBL
         '
-        Me.BarStaticItem2.Caption = "SIM 2"
-        Me.BarStaticItem2.Id = 2
-        Me.BarStaticItem2.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
-        Me.BarStaticItem2.Name = "BarStaticItem2"
+        Me.sim2Stat_LBL.Caption = "SIM 2"
+        Me.sim2Stat_LBL.Id = 2
+        Me.sim2Stat_LBL.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
+        Me.sim2Stat_LBL.Name = "sim2Stat_LBL"
         '
-        'BarStaticItem3
+        'sim3Stat_LBL
         '
-        Me.BarStaticItem3.Caption = "SIM 3"
-        Me.BarStaticItem3.Id = 3
-        Me.BarStaticItem3.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
-        Me.BarStaticItem3.Name = "BarStaticItem3"
+        Me.sim3Stat_LBL.Caption = "SIM 3"
+        Me.sim3Stat_LBL.Id = 3
+        Me.sim3Stat_LBL.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
+        Me.sim3Stat_LBL.Name = "sim3Stat_LBL"
         '
-        'BarStaticItem4
+        'Sim4Stat_LBL
         '
-        Me.BarStaticItem4.Caption = "SIM 4"
-        Me.BarStaticItem4.Id = 4
-        Me.BarStaticItem4.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
-        Me.BarStaticItem4.Name = "BarStaticItem4"
+        Me.Sim4Stat_LBL.Caption = "SIM 4"
+        Me.Sim4Stat_LBL.Id = 4
+        Me.Sim4Stat_LBL.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
+        Me.Sim4Stat_LBL.Name = "Sim4Stat_LBL"
         '
-        'BarStaticItem5
+        'Sim5Stat_LBL
         '
-        Me.BarStaticItem5.Caption = "SIM 5"
-        Me.BarStaticItem5.Id = 5
-        Me.BarStaticItem5.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
-        Me.BarStaticItem5.Name = "BarStaticItem5"
+        Me.Sim5Stat_LBL.Caption = "SIM 5"
+        Me.Sim5Stat_LBL.Id = 5
+        Me.Sim5Stat_LBL.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
+        Me.Sim5Stat_LBL.Name = "Sim5Stat_LBL"
         '
-        'BarStaticItem6
+        'sim6Stat_LBL
         '
-        Me.BarStaticItem6.Caption = "SIM 6"
-        Me.BarStaticItem6.Id = 6
-        Me.BarStaticItem6.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
-        Me.BarStaticItem6.Name = "BarStaticItem6"
+        Me.sim6Stat_LBL.Caption = "SIM 6"
+        Me.sim6Stat_LBL.Id = 6
+        Me.sim6Stat_LBL.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
+        Me.sim6Stat_LBL.Name = "sim6Stat_LBL"
         '
-        'BarStaticItem11
+        'sim7Stat_LBL
         '
-        Me.BarStaticItem11.Caption = "SIM 7"
-        Me.BarStaticItem11.Id = 11
-        Me.BarStaticItem11.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
-        Me.BarStaticItem11.Name = "BarStaticItem11"
+        Me.sim7Stat_LBL.Caption = "SIM 7"
+        Me.sim7Stat_LBL.Id = 11
+        Me.sim7Stat_LBL.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
+        Me.sim7Stat_LBL.Name = "sim7Stat_LBL"
         '
-        'BarStaticItem12
+        'sim8Stat_LBL
         '
-        Me.BarStaticItem12.Caption = "SIM 8"
-        Me.BarStaticItem12.Id = 12
-        Me.BarStaticItem12.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
-        Me.BarStaticItem12.Name = "BarStaticItem12"
+        Me.sim8Stat_LBL.Caption = "SIM 8"
+        Me.sim8Stat_LBL.Id = 12
+        Me.sim8Stat_LBL.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_SIM_Card_25px_1
+        Me.sim8Stat_LBL.Name = "sim8Stat_LBL"
         '
         'BarStaticItem13
         '
@@ -145,21 +145,21 @@
         Me.BarStaticItem13.Id = 13
         Me.BarStaticItem13.Name = "BarStaticItem13"
         '
-        'BarButtonItem1
+        'server_BTN
         '
-        Me.BarButtonItem1.Caption = "Server"
-        Me.BarButtonItem1.Id = 14
-        Me.BarButtonItem1.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.database_server_connection_internet_things_line_vector_28087042
-        Me.BarButtonItem1.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.database_server_connection_internet_things_line_vector_28087042
-        Me.BarButtonItem1.Name = "BarButtonItem1"
+        Me.server_BTN.Caption = "Server"
+        Me.server_BTN.Id = 14
+        Me.server_BTN.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.database_server_connection_internet_things_line_vector_28087042
+        Me.server_BTN.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.database_server_connection_internet_things_line_vector_28087042
+        Me.server_BTN.Name = "server_BTN"
         '
-        'BarButtonItem2
+        'textblast_BTN
         '
-        Me.BarButtonItem2.Caption = "Textblast"
-        Me.BarButtonItem2.Id = 15
-        Me.BarButtonItem2.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_USB_On_40px
-        Me.BarButtonItem2.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_USB_On_40px
-        Me.BarButtonItem2.Name = "BarButtonItem2"
+        Me.textblast_BTN.Caption = "Textblast"
+        Me.textblast_BTN.Id = 15
+        Me.textblast_BTN.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_USB_On_40px
+        Me.textblast_BTN.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_USB_On_40px
+        Me.textblast_BTN.Name = "textblast_BTN"
         '
         'message_BTN
         '
@@ -185,13 +185,13 @@
         Me.outbox_BTN.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Sent_40px
         Me.outbox_BTN.Name = "outbox_BTN"
         '
-        'BarButtonItem6
+        'simDetails_BTN
         '
-        Me.BarButtonItem6.Caption = "Sim Details"
-        Me.BarButtonItem6.Id = 19
-        Me.BarButtonItem6.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Chip_Card_40px1
-        Me.BarButtonItem6.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Chip_Card_40px1
-        Me.BarButtonItem6.Name = "BarButtonItem6"
+        Me.simDetails_BTN.Caption = "Sim Details"
+        Me.simDetails_BTN.Id = 19
+        Me.simDetails_BTN.ImageOptions.Image = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Chip_Card_40px1
+        Me.simDetails_BTN.ImageOptions.LargeImage = Global.TextBlaster___TeleCampaign_V2.My.Resources.Resources.icons8_Chip_Card_40px1
+        Me.simDetails_BTN.Name = "simDetails_BTN"
         '
         'SkinRibbonGalleryBarItem1
         '
@@ -210,30 +210,30 @@
         '
         'ribbonPage1
         '
-        Me.ribbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.ribbonPageGroup1, Me.RibbonPageGroup2, Me.RibbonPageGroup3})
+        Me.ribbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.server_GRP, Me.messaging_GRP, Me.details_GRP})
         Me.ribbonPage1.Name = "ribbonPage1"
         Me.ribbonPage1.Text = "ribbonPage1"
         '
-        'ribbonPageGroup1
+        'server_GRP
         '
-        Me.ribbonPageGroup1.ItemLinks.Add(Me.BarButtonItem1)
-        Me.ribbonPageGroup1.ItemLinks.Add(Me.BarButtonItem2)
-        Me.ribbonPageGroup1.Name = "ribbonPageGroup1"
-        Me.ribbonPageGroup1.Text = "SETTINGS"
+        Me.server_GRP.ItemLinks.Add(Me.server_BTN)
+        Me.server_GRP.ItemLinks.Add(Me.textblast_BTN)
+        Me.server_GRP.Name = "server_GRP"
+        Me.server_GRP.Text = "SETTINGS"
         '
-        'RibbonPageGroup2
+        'messaging_GRP
         '
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.message_BTN)
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.inbox_BTN)
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.outbox_BTN)
-        Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
-        Me.RibbonPageGroup2.Text = "MESSAGING"
+        Me.messaging_GRP.ItemLinks.Add(Me.message_BTN)
+        Me.messaging_GRP.ItemLinks.Add(Me.inbox_BTN)
+        Me.messaging_GRP.ItemLinks.Add(Me.outbox_BTN)
+        Me.messaging_GRP.Name = "messaging_GRP"
+        Me.messaging_GRP.Text = "MESSAGING"
         '
-        'RibbonPageGroup3
+        'details_GRP
         '
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.BarButtonItem6)
-        Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
-        Me.RibbonPageGroup3.Text = "SIM CARD INFO"
+        Me.details_GRP.ItemLinks.Add(Me.simDetails_BTN)
+        Me.details_GRP.Name = "details_GRP"
+        Me.details_GRP.Text = "SIM CARD INFO"
         '
         'RibbonStatusBar1
         '
@@ -259,7 +259,7 @@
         Me.Bar3.DockCol = 0
         Me.Bar3.DockRow = 0
         Me.Bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom
-        Me.Bar3.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem4), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem5), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem6)})
+        Me.Bar3.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.Sim4Stat_LBL), New DevExpress.XtraBars.LinkPersistInfo(Me.Sim5Stat_LBL), New DevExpress.XtraBars.LinkPersistInfo(Me.sim6Stat_LBL)})
         Me.Bar3.OptionsBar.AllowQuickCustomization = False
         Me.Bar3.OptionsBar.DrawDragBorder = False
         Me.Bar3.OptionsBar.UseWholeRow = True
@@ -272,7 +272,7 @@
         Me.Bar1.DockCol = 0
         Me.Bar1.DockRow = 0
         Me.Bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom
-        Me.Bar1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem4), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem5), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem6)})
+        Me.Bar1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.Sim4Stat_LBL), New DevExpress.XtraBars.LinkPersistInfo(Me.Sim5Stat_LBL), New DevExpress.XtraBars.LinkPersistInfo(Me.sim6Stat_LBL)})
         Me.Bar1.OptionsBar.AllowQuickCustomization = False
         Me.Bar1.OptionsBar.DrawDragBorder = False
         Me.Bar1.OptionsBar.UseWholeRow = True
@@ -302,25 +302,25 @@
 
     Private WithEvents ribbonControl1 As DevExpress.XtraBars.Ribbon.RibbonControl
     Private WithEvents ribbonPage1 As DevExpress.XtraBars.Ribbon.RibbonPage
-    Private WithEvents ribbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-    Friend WithEvents BarStaticItem1 As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents BarStaticItem2 As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents BarStaticItem3 As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents BarStaticItem4 As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents BarStaticItem5 As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents BarStaticItem6 As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents RibbonPageGroup2 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-    Friend WithEvents RibbonPageGroup3 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Private WithEvents server_GRP As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents sim1Stat_LBL As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents sim2Stat_LBL As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents sim3Stat_LBL As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents Sim4Stat_LBL As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents Sim5Stat_LBL As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents sim6Stat_LBL As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents messaging_GRP As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents details_GRP As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents DefaultLookAndFeel1 As DevExpress.LookAndFeel.DefaultLookAndFeel
-    Friend WithEvents BarStaticItem11 As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents BarStaticItem12 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents sim7Stat_LBL As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents sim8Stat_LBL As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents BarStaticItem13 As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem2 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents server_BTN As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents textblast_BTN As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents message_BTN As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents inbox_BTN As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents outbox_BTN As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem6 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents simDetails_BTN As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents XtraTabbedMdiManager1 As DevExpress.XtraTabbedMdi.XtraTabbedMdiManager
     Friend WithEvents SkinRibbonGalleryBarItem1 As DevExpress.XtraBars.SkinRibbonGalleryBarItem
     Friend WithEvents BarStaticItem7 As DevExpress.XtraBars.BarStaticItem

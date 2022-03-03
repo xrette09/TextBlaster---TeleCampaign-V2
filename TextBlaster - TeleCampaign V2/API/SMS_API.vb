@@ -1,236 +1,130 @@
-﻿Imports mCore
+﻿Public Class SMS_API
 
-Module SMS_API
-    Public asdstr As String = "TEXTBLASTER v1.0" & vbCrLf & vbCrLf
+    Public Function _formatSampleMessage(ByVal mode As String, ByVal header As String, ByVal body As String) As String
+        Dim sampleMessage As String = ""
 
-#Disable Warning IDE1006 ' Naming Styles
-    Public WithEvents objSMS1 As New mCore.SMS
-    Public WithEvents objSMS2 As New mCore.SMS
-    Public WithEvents objSMS3 As New mCore.SMS
-    Public WithEvents objSMS4 As New mCore.SMS
-
-    Public objInbox1 As mCore.Inbox
-    Public objInbox2 As mCore.Inbox
-    Public objInbox3 As mCore.Inbox
-    Public objInbox4 As mCore.Inbox
-
-    Public sim1_status As Boolean = False
-    Public sim2_status As Boolean = False
-    Public sim3_status As Boolean = False
-    Public sim4_status As Boolean = False
-
-    ReadOnly ISMS As New SMS
-
-    Public Sub konTextBlast()
-        frm_Main.Enabled = False
-        'frm_Main.SplashScreenManager1.ShowWaitForm()
-        Call konSim1()
-        Call konSim2()
-        Call konSim3()
-        Call konSim4()
-        'frm_Main.SplashScreenManager1.CloseWaitForm()
-        frm_Main.Enabled = True
-
-        MsgBox("SIM 1 Availability: " & sim1_status & vbCrLf &
-               "SIM 2 Availability: " & sim2_status & vbCrLf &
-               "SIM 3 Availability: " & sim3_status & vbCrLf &
-               "SIM 4 Availability: " & sim4_status)
-    End Sub
-
-    ''' ================================================================================================
-    ''' Configure Each Sim
-    ''' ================================================================================================
-
-    Public Sub konSim(objSMS As mCore.SMS, comPort As String, sim_status As String)
-        Try
-            objSMS.License.Company = "INNOVEZ ONE"
-            objSMS.License.LicenseType = "PRO-DISTRIBUTION"
-            objSMS.License.Key = "DV5F-5H89-V4L2-NCHN"
-            objSMS.DisableCheckPIN = True
-
-            objSMS.Port = comPort
-            objSMS.BaudRate = CType(CInt("115200"), mCore.BaudRate)
-            objSMS.DataBits = CType(CInt("8"), mCore.DataBits)
-            objSMS.Parity = CType("0", mCore.Parity)
-            'objSMS.StopBits = 1
-
-            objSMS1.Connect()
-            sim_status = True
-        Catch ex As Exception
-            sim_status = False
-        End Try
-    End Sub
-
-    Public Sub konSim1()
-        Try
-            objSMS1.License.Company = "INNOVEZ ONE"
-            objSMS1.License.LicenseType = "PRO-DISTRIBUTION"
-            objSMS1.License.Key = "DV5F-5H89-V4L2-NCHN"
-            objSMS1.DisableCheckPIN = True
-
-            objSMS1.Port = My.Settings.sim1Port
-            objSMS1.BaudRate = CType(CInt("115200"), mCore.BaudRate)
-            objSMS1.DataBits = CType(CInt("8"), mCore.DataBits)
-            objSMS1.Parity = CType("0", mCore.Parity)
-            'objSMS1.StopBits = 1
-
-            objSMS1.Connect()
-            sim1_status = True
-        Catch ex As Exception
-            sim1_status = False
-        End Try
-    End Sub
-
-    Public Sub konSim2()
-        Try
-            objSMS2.License.Company = "INNOVEZ ONE"
-            objSMS2.License.LicenseType = "PRO-DISTRIBUTION"
-            objSMS2.License.Key = "DV5F-5H89-V4L2-NCHN"
-            objSMS2.DisableCheckPIN = True
-
-            objSMS2.Port = My.Settings.sim2Port
-            objSMS2.BaudRate = CType(CInt("115200"), mCore.BaudRate)
-            objSMS2.DataBits = CType(CInt("8"), mCore.DataBits)
-            objSMS2.Parity = CType("0", mCore.Parity)
-            'objSMS1.StopBits = 1
-
-            objSMS2.Connect()
-            sim2_status = True
-        Catch ex As Exception
-            sim2_status = False
-        End Try
-    End Sub
-
-    Public Sub konSim3()
-        Try
-            objSMS3.License.Company = "INNOVEZ ONE"
-            objSMS3.License.LicenseType = "PRO-DISTRIBUTION"
-            objSMS3.License.Key = "DV5F-5H89-V4L2-NCHN"
-            objSMS3.DisableCheckPIN = True
-
-            objSMS3.Port = My.Settings.sim3Port
-            objSMS3.BaudRate = CType(CInt("115200"), mCore.BaudRate)
-            objSMS3.DataBits = CType(CInt("8"), mCore.DataBits)
-            objSMS3.Parity = CType("0", mCore.Parity)
-            'objSMS1.StopBits = 1
-
-            objSMS3.Connect()
-            sim3_status = True
-        Catch ex As Exception
-            sim3_status = False
-        End Try
-    End Sub
-
-    Public Sub konSim4()
-        Try
-            objSMS4.License.Company = "INNOVEZ ONE"
-            objSMS4.License.LicenseType = "PRO-DISTRIBUTION"
-            objSMS4.License.Key = "DV5F-5H89-V4L2-NCHN"
-            objSMS4.DisableCheckPIN = True
-
-            objSMS4.Port = My.Settings.sim4Port
-            objSMS4.BaudRate = CType(CInt("115200"), mCore.BaudRate)
-            objSMS4.DataBits = CType(CInt("8"), mCore.DataBits)
-            objSMS4.Parity = CType("0", mCore.Parity)
-            'objSMS1.StopBits = 1
-
-            objSMS4.Connect()
-            sim4_status = True
-        Catch ex As Exception
-            sim4_status = False
-        End Try
-    End Sub
-
-    ''' ================================================================================================
-    ''' Get Sim Number
-    ''' ================================================================================================
-
-    Function sim1_Number() As String
-        Try
-            Return objSMS1.OwnNumber
-
-        Catch ex As mCore.GeneralException
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "asd")
-            Return ""
-        End Try
-    End Function
-
-    Function sim2_Number() As String
-        Try
-            Return objSMS2.OwnNumber
-        Catch ex As mCore.GeneralException
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "asd")
-            Return ""
-        End Try
-    End Function
-
-    Function sim3_Number() As String
-        Try
-            Return objSMS3.OwnNumber
-        Catch ex As mCore.GeneralException
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "asd")
-            Return ""
-        End Try
-    End Function
-
-    Function sim4_Number() As String
-        Try
-            Return objSMS4.OwnNumber
-        Catch ex As mCore.GeneralException
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "asd")
-            Return ""
-        End Try
-    End Function
-
-    ''' ================================================================================================
-    ''' Set Sim to Received Message
-    ''' ================================================================================================
-
-    Public Sub configReceiveMessage()
-        If sim1_status = True Then
-            objSMS1.AutoDeleteNewMessage = True
-            objSMS1.NewMessageIndication = True
-
+        If mode = "Simple Message" Then
+            sampleMessage = body
+        ElseIf mode = "With Name (English)" Then
+            sampleMessage = "Goodday Mr/Mrs Juan Dela Cruz! " + body
+        ElseIf mode = "With Name (Tagalog)" Then
+            sampleMessage = "Magandang Mr/Mrs Juan Dela Cruz! " + body
+        ElseIf mode = "With Seat Number (English)" Then
+            sampleMessage = "Goodday Mr/Mrs Juan Dela Cruz! " + body + " Your seatnumber is 20."
+        ElseIf mode = "With Seat Number (Tagalog)" Then
+            sampleMessage = "Magandang Mr/Mrs Juan Dela Cruz! " + body + "Ang numero ng iyong upuan ay 20."
         End If
 
-        If sim2_status = True Then
-            objSMS2.AutoDeleteNewMessage = True
-            objSMS2.NewMessageIndication = True
-
+        If header <> "" Then
+            sampleMessage = header + vbCrLf + vbCrLf + sampleMessage
         End If
 
-        If sim3_status = True Then
-            objSMS3.AutoDeleteNewMessage = True
-            objSMS3.NewMessageIndication = True
+        Return sampleMessage
+    End Function
 
+    Public Function _formatFinalMessage(ByVal mode As String, ByVal header As String, ByVal body As String, ByVal name As String, ByVal seatNum As String) As String
+        Dim finalMessage As String = ""
+
+        If mode = "Simple Message" Then
+            finalMessage = body
+        ElseIf mode = "With Name (English)" Then
+            finalMessage = "Goodday Mr/Mrs " + name + "! " + body
+        ElseIf mode = "With Name (Tagalog)" Then
+            finalMessage = "Magandang Mr/Mrs " + name + "! " + body
+        ElseIf mode = "With Seat Number (English)" Then
+            finalMessage = "Goodday Mr/Mrs " + name + "! " + body + " Your seatnumber is " + seatNum + "."
+        ElseIf mode = "With Seat Number (Tagalog)" Then
+            finalMessage = "Magandang Mr/Mrs " + name + "! " + body + "Ang numero ng iyong upuan ay " + seatNum + "."
         End If
 
-        If sim4_status = True Then
-            objSMS4.AutoDeleteNewMessage = True
-            objSMS4.NewMessageIndication = True
+        If header <> "" Then
+            finalMessage = header + vbCrLf + vbCrLf + finalMessage
+        End If
+
+        Return finalMessage
+    End Function
+
+    Public Sub _saveMode(ByVal selectedControl_Sim As String, ByVal mode As String, ByVal header As String, ByVal body As String)
+        If selectedControl_Sim = "1" Then
+            frm_Main.frmmessage.Control_SMS1.Control_SIM11.mode = mode
+            frm_Main.frmmessage.Control_SMS1.Control_SIM11.header = header
+            frm_Main.frmmessage.Control_SMS1.Control_SIM11.body = body
+
+            frm_Main.frmmessage.Control_SMS1.Control_SIM11.message_TB.Text = _formatFinalMessage(mode, header, body, frm_Main.frmmessage.Control_SMS1.Control_SIM11.recipient_Name, frm_Main.frmmessage.Control_SMS1.Control_SIM11.recipient_SeatNum)
+
+        ElseIf selectedControl_Sim = "2" Then
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM21.mode = mode
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM21.header = header
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM21.body = body
+
+        ElseIf selectedControl_Sim = "3" Then
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM31.mode = mode
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM31.header = header
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM31.body = body
+
+        ElseIf selectedControl_Sim = "4" Then
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM41.mode = mode
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM41.header = header
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM41.body = body
+
+        ElseIf selectedControl_Sim = "5" Then
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM51.mode = mode
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM51.header = header
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM51.body = body
+
+        ElseIf selectedControl_Sim = "6" Then
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM61.mode = mode
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM61.header = header
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM61.body = body
+
+        ElseIf selectedControl_Sim = "7" Then
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM71.mode = mode
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM71.header = header
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM71.body = body
+
+        ElseIf selectedControl_Sim = "8" Then
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM81.mode = mode
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM81.header = header
+            'frm_Main.frmmessage.Control_SMS1.Control_SIM81.body = body
 
         End If
     End Sub
 
-    ''' ================================================================================================
-    ''' When new message is Received Save to Database
-    ''' ================================================================================================
+    Public Function _Validate(ByVal cpnum As String) As Boolean
+        Try
+            If Int64.Parse(cpnum) >= 9000000000 And Int64.Parse(cpnum) <= 9999999999 Then
+                Return True
+            Else
+                Return False
+            End If
 
-    Private Sub objSMS1_NewMessageReceived(sender As Object, e As NewMessageReceivedEventArgs) Handles objSMS1.NewMessageReceived
-        'ISMS.saveMessage_to_Inbox(e.Phone, e.TextMessage)
-    End Sub
+        Catch ex As Exception
+            Return False
+        End Try
 
-    Private Sub objSMS2_NewMessageReceived(sender As Object, e As NewMessageReceivedEventArgs) Handles objSMS2.NewMessageReceived
-        'ISMS.saveMessage_to_Inbox(e.Phone, e.TextMessage)
-    End Sub
+    End Function
 
-    Private Sub objSMS3_NewMessageReceived(sender As Object, e As NewMessageReceivedEventArgs) Handles objSMS3.NewMessageReceived
-        'ISMS.saveMessage_to_Inbox(e.Phone, e.TextMessage)
-    End Sub
+    Public Function _sendMessage(ByVal cpnum As String, ByVal message As String, ByVal objSMS As mCore.SMS) As Boolean
+        Dim isErr As Boolean = False
 
-    Private Sub objSMS4_NewMessageReceived(sender As Object, e As NewMessageReceivedEventArgs) Handles objSMS4.NewMessageReceived
-        'ISMS.saveMessage_to_Inbox(e.Phone, e.TextMessage)
-    End Sub
+        Try
+            objSMS.SendSMS(cpnum, message)
+            isErr = False
+        Catch ex As Exception
+            Try
+                If ex.Message = "ERROR 4018: Invalid response to submit PDU [Response: <cr><lf>+CMS ERROR: 31<cr><lf>]" Then
+                    MessageBox.Show("SIM 1: Maximum Message Sent has been reached. Please try again tommorow." & vbCrLf & ex.Message, "Network Timeout", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
 
-#Enable Warning IDE1006 ' Naming Styles
-End Module
+                objSMS1.Disconnect()
+                objSMS1.Connect()
+            Catch exx As Exception
+                MessageBox.Show("Error: Sim 1 Port has been Blocked. Please restart and reinsert sim card.", "Port error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            End Try
+            isErr = True
+        End Try
+
+        Return isErr
+    End Function
+End Class

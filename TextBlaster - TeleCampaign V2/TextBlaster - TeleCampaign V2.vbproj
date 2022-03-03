@@ -104,6 +104,7 @@
   <ItemGroup>
     <Compile Include="API\SMS_API.vb" />
     <Compile Include="API\SqlServer_API.vb" />
+    <Compile Include="API\TextBlast_API.vb" />
     <Compile Include="Form\frm_ComposeMessage.designer.vb">
       <DependentUpon>frm_ComposeMessage.vb</DependentUpon>
     </Compile>

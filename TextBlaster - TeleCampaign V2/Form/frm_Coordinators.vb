@@ -18,9 +18,11 @@ Public Class frm_Coordinators
         If district = "3" Then
             Call konneksyonVoters3_DB()
             konnek = konek_3rd
+
         ElseIf district = "2" Then
             Call konneksyonVoters2_DB()
             konnek = konek_2nd
+
         ElseIf district = "1" Then
             Call konneksyonVoters1_DB()
             konnek = konek_1st
@@ -29,82 +31,6 @@ Public Class frm_Coordinators
         Call mun()
         Call IdCat()
     End Sub
-
-    'Private Sub Move_TSM_Click(sender As Object, e As EventArgs) Handles Move_TSM.Click
-    '    If accessedBy = "Control_MessageList1" Then
-    '        Try
-    '            For rowNum = 0 To Coordinator_GV.RowCount - 1
-    '                If Coordinator_GV.IsRowSelected(rowNum) = True Then
-    '                    ISMS.saveSending(Integer.Parse(frm_Main.Control_SMS1.Control_SendMessage1.Control_MessageList1.MessageList_GV.GetRowCellValue(frm_Main.Control_SMS1.Control_SendMessage1.Control_MessageList1.MessageList_GV.FocusedRowHandle, "ID").ToString), Integer.Parse(Coordinator_GV.GetDataRow(rowNum)(0).ToString))
-    '                    'MsgBox(Integer.Parse(frm_Main.Control_SMS1.Control_SendMessage1.Control_MessageList1.MessageList_GV.GetRowCellValue(frm_Main.Control_SMS1.Control_SendMessage1.Control_MessageList1.MessageList_GV.FocusedRowHandle, "ID").ToString) & vbCrLf & Integer.Parse(Coordinator_GV.GetDataRow(rowNum)(0).ToString))
-    '                    'ids += Coordinator_GV.GetDataRow(rowNum)(0).ToString + ","
-    '                End If
-    '            Next
-
-    '            MsgBox("Recipients is Successfully Added.")
-    '            Me.Close()
-    '        Catch ex As Exception
-    '            MsgBox(ex.Message)
-    '        End Try
-    '    Else
-    '        Dim ids As String = ""
-
-
-    '        If district = "3" Then
-    '            sql = "select A.ID,B.Municipality,C.Cluster AS CNo,D.Barangay,G.Purok,A.Name,A.NickNameID as NickName,A.BirthDate,DATEDIFF(YY,A.BirthDate,Getdate()) as Age,A.CpNo,E.Category as IDCat,F.Precinct as PrNo,A.ValidVoter,A.AddbyUser,A.Deceased from [dbvoters].[dbo].[tblvoters] as A
-    '                                    inner join [dbvoters].[dbo].[tblmunicipality] as B on A.MunicipalityID=B.ID
-    '                                    inner join [dbvoters].[dbo].[tblClusterDetails] as C on A.ClusterID=C.ID
-    '                                    inner join [dbvoters].[dbo].[tblbarangay] as D on A.BarangayID=D.ID
-    '                                    inner join [dbvoters].[dbo].[tblcategory] as E on A.CatID=E.ID 
-    '                                    inner join [dbvoters].[dbo].[tblPrecinctDetails] as F on A.PrecinctID=F.ID
-    '                                    inner join [dbvoters].[dbo].[tblPurok] as G on A.PurokID=G.ID "
-    '        ElseIf district = "2" Then
-    '            sql = "select A.ID,B.Municipality,C.Cluster AS CNo,D.Barangay,G.Purok,A.Name,A.NickNameID as NickName,A.BirthDate,DATEDIFF(YY,A.BirthDate,Getdate()) as Age,A.CpNo,E.Category as IDCat,F.Precinct as PrNo,A.ValidVoter,A.AddbyUser,A.Deceased from [dbvoters_2nd].[dbo].[tblvoters] as A
-    '                                    inner join [dbvoters_2nd].[dbo].[tblmunicipality] as B on A.MunicipalityID=B.ID
-    '                                    inner join [dbvoters_2nd].[dbo].[tblClusterDetails] as C on A.ClusterID=C.ID
-    '                                    inner join [dbvoters_2nd].[dbo].[tblbarangay] as D on A.BarangayID=D.ID
-    '                                    inner join [dbvoters_2nd].[dbo].[tblcategory] as E on A.CatID=E.ID 
-    '                                    inner join [dbvoters_2nd].[dbo].[tblPrecinctDetails] as F on A.PrecinctID=F.ID
-    '                                    inner join [dbvoters_2nd].[dbo].[tblPurok] as G on A.PurokID=G.ID "
-    '        ElseIf district = "1" Then
-    '            sql = "select A.ID,B.Municipality,C.Cluster AS CNo,D.Barangay,G.Purok,A.Name,A.NickNameID as NickName,A.BirthDate,DATEDIFF(YY,A.BirthDate,Getdate()) as Age,A.CpNo,E.Category as IDCat,F.Precinct as PrNo,A.ValidVoter,A.AddbyUser,A.Deceased from [dbvoters_1st].[dbo].[tblvoters] as A
-    '                                    inner join [dbvoters_1st].[dbo].[tblmunicipality] as B on A.MunicipalityID=B.ID
-    '                                    inner join [dbvoters_1st].[dbo].[tblClusterDetails] as C on A.ClusterID=C.ID
-    '                                    inner join [dbvoters_1st].[dbo].[tblbarangay] as D on A.BarangayID=D.ID
-    '                                    inner join [dbvoters_1st].[dbo].[tblcategory] as E on A.CatID=E.ID 
-    '                                    inner join [dbvoters_1st].[dbo].[tblPrecinctDetails] as F on A.PrecinctID=F.ID
-    '                                    inner join [dbvoters_1st].[dbo].[tblPurok] as G on A.PurokID=G.ID "
-    '        End If
-
-    '        Try
-    '            For rowNum = 0 To Coordinator_GV.RowCount - 1
-    '                If Coordinator_GV.IsRowSelected(rowNum) = True Then
-    '                    ids += Coordinator_GV.GetDataRow(rowNum)(0).ToString + ","
-    '                End If
-    '            Next
-
-    '            ids = ids.Substring(0, ids.Length - 1)
-    '            sql = sql & " WHERE A.ID in (" & ids & ")"
-
-    '            If frm_Main.Control_SMS1.Control_Outbox1.SelectedControl = 1 Then
-    '                Call ISMS.populateMessageList("voters", sql, frm_Main.Control_SMS1.Control_Outbox1.Control_Send11.Voters_GC, frm_Main.Control_SMS1.Control_SendMessage1.Control_Send11.Voters_GV)
-
-    '            ElseIf frm_Main.Control_SMS1.Control_Outbox1.SelectedControl = 2 Then
-    '                Call ISMS.populateMessageList("voters", sql, frm_Main.Control_SMS1.Control_Outbox1.Control_Send21.Voters_GC, frm_Main.Control_SMS1.Control_SendMessage1.Control_Send21.Voters_GV)
-
-    '            ElseIf frm_Main.Control_SMS1.Control_Outbox1.SelectedControl = 3 Then
-    '                Call ISMS.populateMessageList("voters", sql, frm_Main.Control_SMS1.Control_Outbox1.Control_Send31.Voters_GC, frm_Main.Control_SMS1.Control_SendMessage1.Control_Send31.Voters_GV)
-
-    '            ElseIf frm_Main.Control_SMS1.Control_Outbox1.SelectedControl = 4 Then
-    '                Call ISMS.populateMessageList("voters", sql, frm_Main.Control_SMS1.Control_Outbox1.Control_Send41.Voters_GC, frm_Main.Control_SMS1.Control_SendMessage1.Control_Send41.Voters_GV)
-    '            End If
-
-    '        Catch ex As Exception
-    '            MsgBox(ex.Message & vbCrLf & vbCrLf & sql)
-    '        End Try
-    '    End If
-
-    'End Sub
 
     '/////////////////////////////////////////////////////////////////////////
 
@@ -590,13 +516,13 @@ Public Class frm_Coordinators
             ids = ids + Coordinator_GV.GetDataRow(rowNum)(0).ToString + ", "
         Next
 
-        sql = "select A.ID,B.Municipality,C.Cluster AS CNo,D.Barangay,G.Purok,A.Name,A.NickNameID as NickName,A.BirthDate,DATEDIFF(YY,A.BirthDate,Getdate()) as Age,A.CpNo,E.Category as IDCat,F.Precinct as PrNo,A.ValidVoter,A.AddbyUser,A.Deceased from [dbvoters].[dbo].[tblvoters] as A
-                                        inner join [dbvoters].[dbo].[tblmunicipality] as B on A.MunicipalityID=B.ID
-                                        inner join [dbvoters].[dbo].[tblClusterDetails] as C on A.ClusterID=C.ID
-                                        inner join [dbvoters].[dbo].[tblbarangay] as D on A.BarangayID=D.ID
-                                        inner join [dbvoters].[dbo].[tblcategory] as E on A.CatID=E.ID 
-                                        inner join [dbvoters].[dbo].[tblPrecinctDetails] as F on A.PrecinctID=F.ID
-                                        inner join [dbvoters].[dbo].[tblPurok] as G on A.PurokID=G.ID  where ID in (" + ids.Substring(0, ids.Length - 2) + ") "
+        sql = "select A.ID,B.Municipality,C.Cluster AS CNo, D.Barangay, G.Purok, A.Name, A.NickNameID as NickName, A.BirthDate, DATEDIFF(YY,A.BirthDate,Getdate()) as Age, A.CpNo, E.Category as IDCat, F.Precinct as PrNo, A.ValidVoter, A.AddbyUser, A.Deceased from tblvoters as A
+                                        inner join tblmunicipality as B on A.MunicipalityID=B.ID
+                                        inner join tblClusterDetails as C on A.ClusterID=C.ID
+                                        inner join tblbarangay as D on A.BarangayID=D.ID
+                                        inner join tblcategory as E on A.CatID=E.ID 
+                                        inner join tblPrecinctDetails as F on A.PrecinctID=F.ID
+                                        inner join tblPurok as G on A.PurokID=G.ID  where A.ID in (" + ids.Substring(0, ids.Length - 2) + ") "
 
         If district = "1" Then
             Call populateGridControl(sql, konek_1st, gridControl, gridView)

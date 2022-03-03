@@ -25,10 +25,10 @@ Partial Class control_SIM1
         Me.components = New System.ComponentModel.Container()
         Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
         Me.Bar3 = New DevExpress.XtraBars.Bar()
-        Me.BarStaticItem4 = New DevExpress.XtraBars.BarStaticItem()
-        Me.BarStaticItem5 = New DevExpress.XtraBars.BarStaticItem()
-        Me.BarStaticItem6 = New DevExpress.XtraBars.BarStaticItem()
-        Me.BarStaticItem7 = New DevExpress.XtraBars.BarStaticItem()
+        Me.totalCount_LBL = New DevExpress.XtraBars.BarStaticItem()
+        Me.totalSelected_LBL = New DevExpress.XtraBars.BarStaticItem()
+        Me.sendingStatus_LBL = New DevExpress.XtraBars.BarStaticItem()
+        Me.estimatedTime_LBL = New DevExpress.XtraBars.BarStaticItem()
         Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
@@ -38,7 +38,7 @@ Partial Class control_SIM1
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.ALL = New System.Windows.Forms.Panel()
         Me.contentPanel = New DevExpress.XtraEditors.PanelControl()
-        Me.SimGC = New DevExpress.XtraGrid.GridControl()
+        Me.MessageGC = New DevExpress.XtraGrid.GridControl()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CoordinatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StDistrictToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -50,7 +50,7 @@ Partial Class control_SIM1
         Me.RdDistrictToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImportFromTupadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImportFromExcelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SimGV = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.MessageGV = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.bottomPanel = New DevExpress.XtraEditors.PanelControl()
         Me.textbox = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -61,15 +61,15 @@ Partial Class control_SIM1
         Me.messageID_LBL = New DevExpress.XtraEditors.LabelControl()
         Me.buttons = New System.Windows.Forms.Panel()
         Me.send_BTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.stopBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.stop_BTN = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemMarqueeProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ALL.SuspendLayout()
         CType(Me.contentPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.contentPanel.SuspendLayout()
-        CType(Me.SimGC, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MessageGC, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
-        CType(Me.SimGV, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MessageGV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bottomPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bottomPanel.SuspendLayout()
         Me.textbox.SuspendLayout()
@@ -87,7 +87,7 @@ Partial Class control_SIM1
         Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
         Me.BarManager1.DockControls.Add(Me.barDockControlRight)
         Me.BarManager1.Form = Me
-        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem4, Me.BarStaticItem5, Me.BarStaticItem6, Me.BarStaticItem7, Me.BarEditItem1})
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.totalCount_LBL, Me.totalSelected_LBL, Me.sendingStatus_LBL, Me.estimatedTime_LBL, Me.BarEditItem1})
         Me.BarManager1.MaxItemId = 5
         Me.BarManager1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemMarqueeProgressBar1})
         Me.BarManager1.StatusBar = Me.Bar3
@@ -99,43 +99,43 @@ Partial Class control_SIM1
         Me.Bar3.DockCol = 0
         Me.Bar3.DockRow = 0
         Me.Bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom
-        Me.Bar3.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem4), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem5), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem6), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem7)})
+        Me.Bar3.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.totalCount_LBL), New DevExpress.XtraBars.LinkPersistInfo(Me.totalSelected_LBL), New DevExpress.XtraBars.LinkPersistInfo(Me.sendingStatus_LBL), New DevExpress.XtraBars.LinkPersistInfo(Me.estimatedTime_LBL)})
         Me.Bar3.OptionsBar.AllowQuickCustomization = False
         Me.Bar3.OptionsBar.DrawDragBorder = False
         Me.Bar3.OptionsBar.UseWholeRow = True
         Me.Bar3.Text = "Status bar"
         '
-        'BarStaticItem4
+        'totalCount_LBL
         '
-        Me.BarStaticItem4.Caption = "Total Count: 0"
-        Me.BarStaticItem4.Id = 0
-        Me.BarStaticItem4.ItemAppearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold
-        Me.BarStaticItem4.ItemAppearance.Normal.Options.UseFont = True
-        Me.BarStaticItem4.Name = "BarStaticItem4"
+        Me.totalCount_LBL.Caption = "Total Count: 0"
+        Me.totalCount_LBL.Id = 0
+        Me.totalCount_LBL.ItemAppearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.totalCount_LBL.ItemAppearance.Normal.Options.UseFont = True
+        Me.totalCount_LBL.Name = "totalCount_LBL"
         '
-        'BarStaticItem5
+        'totalSelected_LBL
         '
-        Me.BarStaticItem5.Caption = "Total Selected: 0"
-        Me.BarStaticItem5.Id = 1
-        Me.BarStaticItem5.ItemAppearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold
-        Me.BarStaticItem5.ItemAppearance.Normal.Options.UseFont = True
-        Me.BarStaticItem5.Name = "BarStaticItem5"
+        Me.totalSelected_LBL.Caption = "Total Selected: 0"
+        Me.totalSelected_LBL.Id = 1
+        Me.totalSelected_LBL.ItemAppearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.totalSelected_LBL.ItemAppearance.Normal.Options.UseFont = True
+        Me.totalSelected_LBL.Name = "totalSelected_LBL"
         '
-        'BarStaticItem6
+        'sendingStatus_LBL
         '
-        Me.BarStaticItem6.Caption = "Sending 0 out of 0"
-        Me.BarStaticItem6.Id = 2
-        Me.BarStaticItem6.ItemAppearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold
-        Me.BarStaticItem6.ItemAppearance.Normal.Options.UseFont = True
-        Me.BarStaticItem6.Name = "BarStaticItem6"
+        Me.sendingStatus_LBL.Caption = "Sending 0 out of 0"
+        Me.sendingStatus_LBL.Id = 2
+        Me.sendingStatus_LBL.ItemAppearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.sendingStatus_LBL.ItemAppearance.Normal.Options.UseFont = True
+        Me.sendingStatus_LBL.Name = "sendingStatus_LBL"
         '
-        'BarStaticItem7
+        'estimatedTime_LBL
         '
-        Me.BarStaticItem7.Caption = "Estimated Seding Time: 0mins"
-        Me.BarStaticItem7.Id = 3
-        Me.BarStaticItem7.ItemAppearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold
-        Me.BarStaticItem7.ItemAppearance.Normal.Options.UseFont = True
-        Me.BarStaticItem7.Name = "BarStaticItem7"
+        Me.estimatedTime_LBL.Caption = "Estimated Seding Time: 0mins"
+        Me.estimatedTime_LBL.Id = 3
+        Me.estimatedTime_LBL.ItemAppearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.estimatedTime_LBL.ItemAppearance.Normal.Options.UseFont = True
+        Me.estimatedTime_LBL.Name = "estimatedTime_LBL"
         '
         'barDockControlTop
         '
@@ -180,6 +180,9 @@ Partial Class control_SIM1
         '
         Me.RepositoryItemMarqueeProgressBar1.Name = "RepositoryItemMarqueeProgressBar1"
         '
+        'BackgroundWorker1
+        '
+        '
         'ALL
         '
         Me.ALL.Controls.Add(Me.contentPanel)
@@ -192,30 +195,30 @@ Partial Class control_SIM1
         '
         'contentPanel
         '
-        Me.contentPanel.Controls.Add(Me.SimGC)
+        Me.contentPanel.Controls.Add(Me.MessageGC)
         Me.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.contentPanel.Location = New System.Drawing.Point(0, 0)
         Me.contentPanel.Name = "contentPanel"
         Me.contentPanel.Size = New System.Drawing.Size(1000, 334)
         Me.contentPanel.TabIndex = 11
         '
-        'SimGC
+        'MessageGC
         '
-        Me.SimGC.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.SimGC.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SimGC.Location = New System.Drawing.Point(2, 2)
-        Me.SimGC.MainView = Me.SimGV
-        Me.SimGC.MenuManager = Me.BarManager1
-        Me.SimGC.Name = "SimGC"
-        Me.SimGC.Size = New System.Drawing.Size(996, 330)
-        Me.SimGC.TabIndex = 0
-        Me.SimGC.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.SimGV})
+        Me.MessageGC.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.MessageGC.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MessageGC.Location = New System.Drawing.Point(2, 2)
+        Me.MessageGC.MainView = Me.MessageGV
+        Me.MessageGC.MenuManager = Me.BarManager1
+        Me.MessageGC.Name = "MessageGC"
+        Me.MessageGC.Size = New System.Drawing.Size(996, 330)
+        Me.MessageGC.TabIndex = 0
+        Me.MessageGC.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.MessageGV})
         '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CoordinatorToolStripMenuItem, Me.ImportFromVotersToolStripMenuItem, Me.ImportFromTupadToolStripMenuItem, Me.ImportFromExcelToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(214, 114)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(214, 92)
         '
         'CoordinatorToolStripMenuItem
         '
@@ -227,19 +230,19 @@ Partial Class control_SIM1
         'StDistrictToolStripMenuItem
         '
         Me.StDistrictToolStripMenuItem.Name = "StDistrictToolStripMenuItem"
-        Me.StDistrictToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StDistrictToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.StDistrictToolStripMenuItem.Text = "1st District"
         '
         'NdDistrictToolStripMenuItem
         '
         Me.NdDistrictToolStripMenuItem.Name = "NdDistrictToolStripMenuItem"
-        Me.NdDistrictToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NdDistrictToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.NdDistrictToolStripMenuItem.Text = "2nd District"
         '
         'RdDistrictToolStripMenuItem
         '
         Me.RdDistrictToolStripMenuItem.Name = "RdDistrictToolStripMenuItem"
-        Me.RdDistrictToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RdDistrictToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.RdDistrictToolStripMenuItem.Text = "3rd District"
         '
         'ImportFromVotersToolStripMenuItem
@@ -279,15 +282,19 @@ Partial Class control_SIM1
         Me.ImportFromExcelToolStripMenuItem.Size = New System.Drawing.Size(213, 22)
         Me.ImportFromExcelToolStripMenuItem.Text = "Import From Excel"
         '
-        'SimGV
+        'MessageGV
         '
-        Me.SimGV.Appearance.GroupPanel.Font = New System.Drawing.Font("Segoe Print", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.SimGV.Appearance.GroupPanel.ForeColor = System.Drawing.Color.Black
-        Me.SimGV.Appearance.GroupPanel.Options.UseFont = True
-        Me.SimGV.Appearance.GroupPanel.Options.UseForeColor = True
-        Me.SimGV.GridControl = Me.SimGC
-        Me.SimGV.GroupPanelText = "Sim 1 Delivery Status"
-        Me.SimGV.Name = "SimGV"
+        Me.MessageGV.Appearance.GroupPanel.Font = New System.Drawing.Font("Segoe Print", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.MessageGV.Appearance.GroupPanel.ForeColor = System.Drawing.Color.Black
+        Me.MessageGV.Appearance.GroupPanel.Options.UseFont = True
+        Me.MessageGV.Appearance.GroupPanel.Options.UseForeColor = True
+        Me.MessageGV.GridControl = Me.MessageGC
+        Me.MessageGV.GroupPanelText = "Sim 1 Delivery Status"
+        Me.MessageGV.Name = "MessageGV"
+        Me.MessageGV.OptionsBehavior.Editable = False
+        Me.MessageGV.OptionsSelection.InvertSelection = True
+        Me.MessageGV.OptionsSelection.MultiSelect = True
+        Me.MessageGV.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect
         '
         'bottomPanel
         '
@@ -391,7 +398,7 @@ Partial Class control_SIM1
         '
         Me.buttons.BackColor = System.Drawing.Color.Transparent
         Me.buttons.Controls.Add(Me.send_BTN)
-        Me.buttons.Controls.Add(Me.stopBTN)
+        Me.buttons.Controls.Add(Me.stop_BTN)
         Me.buttons.Dock = System.Windows.Forms.DockStyle.Right
         Me.buttons.Location = New System.Drawing.Point(785, 2)
         Me.buttons.Name = "buttons"
@@ -413,19 +420,19 @@ Partial Class control_SIM1
         Me.send_BTN.TabIndex = 19
         Me.send_BTN.Text = "SEND USING SIM1"
         '
-        'stopBTN
+        'stop_BTN
         '
-        Me.stopBTN.Appearance.BackColor = System.Drawing.Color.Transparent
-        Me.stopBTN.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.stopBTN.Appearance.Options.UseBackColor = True
-        Me.stopBTN.Appearance.Options.UseFont = True
-        Me.stopBTN.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.stopBTN.Enabled = False
-        Me.stopBTN.Location = New System.Drawing.Point(2, 71)
-        Me.stopBTN.Name = "stopBTN"
-        Me.stopBTN.Size = New System.Drawing.Size(209, 66)
-        Me.stopBTN.TabIndex = 30
-        Me.stopBTN.Text = "STOP"
+        Me.stop_BTN.Appearance.BackColor = System.Drawing.Color.Transparent
+        Me.stop_BTN.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.stop_BTN.Appearance.Options.UseBackColor = True
+        Me.stop_BTN.Appearance.Options.UseFont = True
+        Me.stop_BTN.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.stop_BTN.Enabled = False
+        Me.stop_BTN.Location = New System.Drawing.Point(2, 71)
+        Me.stop_BTN.Name = "stop_BTN"
+        Me.stop_BTN.Size = New System.Drawing.Size(209, 66)
+        Me.stop_BTN.TabIndex = 30
+        Me.stop_BTN.Text = "STOP"
         '
         'control_SIM1
         '
@@ -443,9 +450,9 @@ Partial Class control_SIM1
         Me.ALL.ResumeLayout(False)
         CType(Me.contentPanel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.contentPanel.ResumeLayout(False)
-        CType(Me.SimGC, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MessageGC, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
-        CType(Me.SimGV, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MessageGV, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bottomPanel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.bottomPanel.ResumeLayout(False)
         Me.textbox.ResumeLayout(False)
@@ -460,10 +467,10 @@ Partial Class control_SIM1
     End Sub
     Friend WithEvents BarManager1 As DevExpress.XtraBars.BarManager
     Friend WithEvents Bar3 As DevExpress.XtraBars.Bar
-    Friend WithEvents BarStaticItem4 As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents BarStaticItem5 As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents BarStaticItem6 As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents BarStaticItem7 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents totalCount_LBL As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents totalSelected_LBL As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents sendingStatus_LBL As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents estimatedTime_LBL As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents barDockControlTop As DevExpress.XtraBars.BarDockControl
     Friend WithEvents barDockControlBottom As DevExpress.XtraBars.BarDockControl
     Friend WithEvents barDockControlLeft As DevExpress.XtraBars.BarDockControl
@@ -473,8 +480,8 @@ Partial Class control_SIM1
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents ALL As Panel
     Friend WithEvents contentPanel As DevExpress.XtraEditors.PanelControl
-    Friend WithEvents SimGC As DevExpress.XtraGrid.GridControl
-    Friend WithEvents SimGV As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents MessageGC As DevExpress.XtraGrid.GridControl
+    Friend WithEvents MessageGV As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents bottomPanel As DevExpress.XtraEditors.PanelControl
     Friend WithEvents textbox As Panel
     Friend WithEvents Panel1 As Panel
@@ -485,7 +492,7 @@ Partial Class control_SIM1
     Friend WithEvents messageID_LBL As DevExpress.XtraEditors.LabelControl
     Friend WithEvents buttons As Panel
     Friend WithEvents send_BTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents stopBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents stop_BTN As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents CoordinatorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StDistrictToolStripMenuItem As ToolStripMenuItem

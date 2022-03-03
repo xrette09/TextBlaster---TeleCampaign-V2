@@ -70,7 +70,7 @@ Partial Public Class frm_Main
         End Try
     End Sub
 
-    Private Sub BarStaticItem1_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarStaticItem1.ItemClick
+    Private Sub BarStaticItem1_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles sim1Stat_LBL.ItemClick
         frmmessage.Control_SMS1.BringToFront()
     End Sub
 End Class
